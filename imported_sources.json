@@ -19,6 +19,10 @@
                           "https://github.com/Rimagination/bili-note":  {
                                                                             "tool_name":  "bili-note",
                                                                             "imported_at":  "2026-07-13T22:43:00+08:00"
+                                                                        },
+                          "https://github.com/googleapis/mcp-toolbox":  {
+                                                                            "tool_name":  "mcp-toolbox",
+                                                                            "imported_at":  "2026-07-13T22:47:00+08:00"
                                                                         }
                       }
 }
