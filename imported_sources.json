@@ -1,12 +1,16 @@
 {
-  "imported_urls": {
-    "https://github.com/linshenkx/prompt-optimizer": {
-      "tool_name": "prompt-optimizer",
-      "imported_at": "2026-07-13T10:44:20+08:00"
-    },
-    "https://github.com/mvanhorn/last30days-skill": {
-      "tool_name": "last30days-skill",
-      "imported_at": "2026-07-13T10:45:00+08:00"
-    }
-  }
+    "imported_urls":  {
+                          "https://github.com/linshenkx/prompt-optimizer":  {
+                                                                                "tool_name":  "prompt-optimizer",
+                                                                                "imported_at":  "2026-07-13T10:44:20+08:00"
+                                                                            },
+                          "https://github.com/mvanhorn/last30days-skill":  {
+                                                                               "tool_name":  "last30days-skill",
+                                                                               "imported_at":  "2026-07-13T10:45:00+08:00"
+                                                                           },
+                          "https://github.com/Leonxlnx/taste-skill":  {
+                                                                          "tool_name":  "taste-skill",
+                                                                          "imported_at":  "2026-07-13T10:50:00+08:00"
+                                                                      }
+                      }
 }
