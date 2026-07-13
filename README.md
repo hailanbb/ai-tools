@@ -37,6 +37,7 @@
 | **🛠️ MCP服务** | **mcp-toolbox** | 数据库 MCP 服务与自定义工具框架，支持一键连接 PostgreSQL、MySQL 等关系型及非关系型数据库，提供安全 SQL 执行和 NL2SQL 能力 | 当 Agent 需要直接读取、查询或操作数据库（AlloyDB, BigQuery, Spanner, Postgres, MySQL 等），或需要构建安全的数据库交互工具时 | [👉 详细配置与使用指南](tools/mcp-toolbox/README.md) |
 | **🤖 智能体技能** | **mattpocock-skills** | 面向 AI 智能体的工程实践技能集，包含意图对齐拷问（Grill）、测试驱动开发（TDD）以及 Bug 系统化诊断等防盲目编码技能 | 在 Agent 动笔写复杂需求代码前对齐意图、在项目开发中引入红绿 TDD 测试反馈环、或对复杂系统进行 Bug 深度诊断时 | [👉 详细配置与使用指南](tools/skills/README.md) |
 | **📥 媒体下载** | **video-batch-download** | 多平台（抖音、B站、小红书）公开视频批量下载与本地语音转写工具，支持分离流合并，本地 faster-whisper 转录和结构化输出 | 批量下载抖音/B站/小红书公开视频，或转录音频内容为文本进行后续分析时 | [👉 详细配置与使用指南](tools/video-batch-download/README.md) |
+| **🤖 智能体技能** | **cangjie-skill** | 基于 RIA-TV++ 管道的方法论蒸馏工具，支持从书籍、长视频转录、播客等文本中，抽取、验证并构建高执行力的 AI 技能卡（SKILL.md） | 当需要系统性分析一本书或一个知识视频/播客，并将其提炼为可在 Agent 中被场景触发的模块化执行工具时 | [👉 详细配置与使用指南](tools/cangjie-skill/README.md) |
 
 ---
 
