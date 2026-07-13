@@ -39,6 +39,7 @@
 | **📥 媒体下载** | **video-batch-download** | 多平台（抖音、B站、小红书）公开视频批量下载与本地语音转写工具，支持分离流合并，本地 faster-whisper 转录和结构化输出 | 批量下载抖音/B站/小红书公开视频，或转录音频内容为文本进行后续分析时 | [👉 详细配置与使用指南](tools/video-batch-download/README.md) |
 | **🤖 智能体技能** | **cangjie-skill** | 基于 RIA-TV++ 管道的方法论蒸馏工具，支持从书籍、长视频转录、播客等文本中，抽取、验证并构建高执行力的 AI 技能卡（SKILL.md） | 当需要系统性分析一本书或一个知识视频/播客，并将其提炼为可在 Agent 中被场景触发的模块化执行工具时 | [👉 详细配置与使用指南](tools/cangjie-skill/README.md) |
 | **📝 写作编辑** | **ai-write-flow** | 技术博客与多端图卡写作流程控制技能包，支持选题对齐、时效核查、结构硬性门禁以及多轮降 AI 腔调的审查机制 | Agent 需要协助撰写技术博客、公众号长文、图卡内容，或对已有文本进行事实核验和中文化润色（降 AI 腔）时 | [👉 详细配置与使用指南](tools/ai-write-flow/README.md) |
+| **🛠️ MCP服务** | **fast-note-sync-service** | 支持原生 MCP 协议和 REST API 的高性能 Obsidian 多端实时同步与网页管理服务平台，打通 AI 对个人知识库的读写通道 | 将本地 Obsidian 笔记仓库发布或同步到远端，或接入 Cursor 等 AI 客户端的 MCP 协议读写笔记时 | [👉 详细配置与使用指南](tools/fast-note-sync-service/README.md) |
 
 ---
 
