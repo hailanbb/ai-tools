@@ -47,6 +47,10 @@
                           "https://github.com/GordenSun/GordenPPTSkill":  {
                                                                               "tool_name":  "gorden-ppt-skill",
                                                                               "imported_at":  "2026-07-13T23:01:47+08:00"
-                                                                          }
+                                                                          },
+                          "https://github.com/oomkapwn/enquire-mcp":  {
+                                                                          "tool_name":  "enquire-mcp",
+                                                                          "imported_at":  "2026-07-13T23:02:00+08:00"
+                                                                      }
                       }
 }

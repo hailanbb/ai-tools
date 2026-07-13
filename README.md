@@ -41,6 +41,7 @@
 | **📝 写作编辑** | **ai-write-flow** | 技术博客与多端图卡写作流程控制技能包，支持选题对齐、时效核查、结构硬性门禁以及多轮降 AI 腔调的审查机制 | Agent 需要协助撰写技术博客、公众号长文、图卡内容，或对已有文本进行事实核验和中文化润色（降 AI 腔）时 | [👉 详细配置与使用指南](tools/ai-write-flow/README.md) |
 | **🛠️ MCP服务** | **fast-note-sync-service** | 支持原生 MCP 协议和 REST API 的高性能 Obsidian 多端实时同步与网页管理服务平台，打通 AI 对个人知识库的读写通道 | 将本地 Obsidian 笔记仓库发布或同步到远端，或接入 Cursor 等 AI 客户端的 MCP 协议读写笔记时 | [👉 详细配置与使用指南](tools/fast-note-sync-service/README.md) |
 | **🎨 演示文稿** | **gorden-ppt-skill** | 基于 21 套内置或自定义的高质量中文模板生成与编辑 PPTX 演示文稿，支持自动出框检测与同级标题字号一致校验 | 需要制作年终/季度总结、商务提案、项目汇报、述职竞聘等高质量 PPTX 演示文稿且不破坏排版设计时 | [👉 详细配置与使用指南](tools/gorden-ppt-skill/README.md) |
+| **🛠️ MCP服务** | **enquire-mcp** | 厂商中立、时效感知的 Obsidian 长期记忆与检索 MCP 服务，支持 BM25 + 本地向量检索与重排、Louvain 社区图谱增强，零云端调用 | 将个人 Obsidian 仓库配置为 AI 客户端（Cursor、Claude Code等）的本地时效感知长期记忆库时 | [👉 详细配置与使用指南](tools/enquire-mcp/README.md) |
 
 ---
 

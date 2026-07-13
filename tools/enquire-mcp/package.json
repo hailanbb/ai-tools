@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@oomkapwn/enquire-mcp",
+  "version": "3.11.6-rc.2",
+  "mcpName": "io.github.oomkapwn/enquire-mcp",
+  "description": "MCP server giving AI agents (Claude Code, Claude Desktop, Cursor, ChatGPT, Codex, OpenClaw) persistent long-term memory backed by your local Obsidian markdown vault. Hybrid retrieval (BM25 + ML embeddings + BGE reranker, RRF-fused), HNSW + int8 quantization, agentic RAG (HyDE + sub-question decomposition), GraphRAG-light (Louvain), standalone Obsidian Bases, PDFs + Tesseract OCR. Vendor-neutral memory layer for any MCP-compatible agent. 46 tools, 19 MCP prompts, 1490 tests, signed npm build provenance (SLSA L2), semver-bound, MIT, zero cloud calls during serve.",
+  "type": "module",
+  "bin": {
+    "enquire-mcp": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./embed-db": {
+      "types": "./dist/embed-db.d.ts",
+      "import": "./dist/embed-db.js"
+    },
+    "./fts5": {
+      "types": "./dist/fts5.d.ts",
+      "import": "./dist/fts5.js"
+    },
+    "./vault": {
+      "types": "./dist/vault.d.ts",
+      "import": "./dist/vault.js"
+    },
+    "./hnsw": {
+      "types": "./dist/hnsw.d.ts",
+      "import": "./dist/hnsw.js"
+    },
+    "./bases": {
+      "types": "./dist/bases.d.ts",
+      "import": "./dist/bases.js"
+    },
+    "./communities": {
+      "types": "./dist/communities.d.ts",
+      "import": "./dist/communities.js"
+    },
+    "./tool-manifest": {
+      "types": "./dist/tool-manifest.d.ts",
+      "import": "./dist/tool-manifest.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "docs/api.md",
+    "docs/QUICKSTART.md",
+    "docs/COMPARISON.md",
+    "docs/benchmarks.md",
+    "docs/EVALUATION_PLAN.md",
+    "docs/http-transport.md",
+    "examples",
+    "assets/social-preview.png",
+    "README.md",
+    "README.zh.md",
+    "README.es.md",
+    "README.hi.md",
+    "README.ar.md",
+    "README.ru.md",
+    "README.pt.md",
+    "README.fr.md",
+    "README.ja.md",
+    "README.ko.md",
+    "README.de.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "STABILITY.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "rm -rf dist && tsc && chmod +x dist/index.js",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check:changelog-coverage": "node scripts/check-changelog-coverage.mjs",
+    "check:per-file-coverage": "node scripts/check-per-file-coverage.mjs",
+    "check:oia": "node scripts/oia-walk.mjs",
+    "lint": "biome check --error-on-warnings",
+    "lint:fix": "biome check --write",
+    "format": "biome format --write",
+    "render:preview": "node scripts/render-social-preview.mjs",
+    "bench": "npm run build && node scripts/bench.mjs",
+    "bench:quick": "npm run build && node scripts/bench.mjs --quick",
+    "bench:retrieval": "npm run build && node scripts/run-benchmarks.mjs",
+    "bench:peek-cache": "npm run build && node scripts/bench-peek-cache.mjs",
+    "bench:longmemeval": "npm run build && node scripts/bench-longmemeval.mjs",
+    "bench:context": "npm run build && node scripts/bench-context.mjs",
+    "docs:api": "typedoc",
+    "check:audit": "node scripts/check-audit.mjs",
+    "prepare": "rm -rf dist && tsc && chmod +x dist/index.js && (husky 2>/dev/null || true)",
+    "prepublishOnly": "npm run lint && npm run build && npm test && node scripts/check-version-consistency.mjs && node scripts/check-audit.mjs && npm run test:coverage --silent && node scripts/check-changelog-coverage.mjs && node scripts/check-per-file-coverage.mjs",
+    "version": "node scripts/sync-version.mjs && git add package.json package-lock.json src/index.ts CHANGELOG.md"
+  },
+  "keywords": [
+    "ai-memory",
+    "agent-memory",
+    "llm-memory",
+    "long-term-memory",
+    "claude-memory",
+    "memory-for-ai-agents",
+    "context-engineering",
+    "second-brain",
+    "personal-knowledge-base",
+    "knowledge-graph",
+    "obsidian",
+    "obsidian-md",
+    "obsidian-mcp",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "claude-desktop",
+    "cursor",
+    "chatgpt",
+    "openclaw",
+    "codex",
+    "windsurf",
+    "zed",
+    "aider",
+    "gemini-cli",
+    "opencode",
+    "kilocode",
+    "ai-agent",
+    "ai-agents",
+    "ai-search",
+    "enquire",
+    "berners-lee",
+    "wikilinks",
+    "backlinks",
+    "frontmatter",
+    "dataview",
+    "canvas",
+    "bases",
+    "obsidian-bases",
+    "markdown",
+    "pkm",
+    "knowledge-management",
+    "hypertext",
+    "rag",
+    "retrieval-augmented-generation",
+    "graphrag",
+    "community-detection",
+    "louvain",
+    "modularity",
+    "hyde",
+    "hypothetical-document-embeddings",
+    "agentic-rag",
+    "sub-question-decomposition",
+    "hybrid-retrieval",
+    "hybrid-search",
+    "semantic-search",
+    "vector-search",
+    "vector-database",
+    "embeddings",
+    "bm25",
+    "fts5",
+    "tf-idf",
+    "rrf",
+    "reciprocal-rank-fusion",
+    "hnsw",
+    "cross-encoder",
+    "reranker",
+    "bge",
+    "huggingface",
+    "transformers",
+    "multilingual",
+    "pdf",
+    "ocr",
+    "tesseract",
+    "streamable-http",
+    "remote-mcp",
+    "build-provenance"
+  ],
+  "author": "Alex (@OomkaBear)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oomkapwn/enquire-mcp.git"
+  },
+  "homepage": "https://github.com/oomkapwn/enquire-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/oomkapwn/enquire-mcp/issues"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "chokidar": "^5.0.0",
+    "commander": "^15.0.0",
+    "js-yaml": "^5.2.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^26.0.1",
+    "@vitest/coverage-v8": "^4.1.9",
+    "github-slugger": "^2.0.0",
+    "husky": "^9.1.7",
+    "sharp": "^0.35.2",
+    "typedoc": "^0.28.19",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "optionalDependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "@napi-rs/canvas": "^1.0.1",
+    "better-sqlite3": "^12.11.1",
+    "hnswlib-node": "^3.0.0",
+    "pdfjs-dist": "^6.1.200",
+    "tesseract.js": "^7.0.0"
+  },
+  "overrides": {
+    "hono": "^4.12.26",
+    "protobufjs": "^7.6.4"
+  }
+}
