@@ -1,0 +1,553 @@
+{
+  "version": "1.0",
+  "skill": "ai-write-flow",
+  "scenarios": [
+    {
+      "id": "full-workflow",
+      "name": "完整写作流程",
+      "description": "用户给定主题，期望走 Step 1-6 完整流程",
+      "input": {
+        "user_message": "帮我写一篇关于 Claude Code 的 MCP 工具开发的文章，目标读者是有一定经验的 AI 开发者",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "Step 1 输出工作区路径和素材状态（briefs 为空）",
+        "Step 2 进入 publish_mode，执行 Layer 1-4 完整调研",
+        "Step 3 提供 3-4 个选题方向，等待用户选择",
+        "Step 4 先输出骨架等待确认，骨架使用 # / ## / #### 三层结构，包含 ## 写在最后",
+        "Step 4 骨架中每个普通 ## 章节包含 2-3 个 #### ①②③ 小标题",
+        "Step 5 执行三遍审校，包含结构审校检查",
+        "Step 6 输出到 workspace/output/ 并报告路径"
+      ],
+      "expected_not": [
+        "不跳过选题确认直接写正文",
+        "不在未获用户确认时从骨架直接进入正文",
+        "不将审校报告写入最终 .md 文件",
+        "不在骨架中使用 ### 层级",
+        "不生成缺少 ## 写在最后 的骨架"
+      ]
+    },
+    {
+      "id": "review-only",
+      "name": "审校降 AI 味",
+      "description": "用户给已有文章，要求降 AI 味/审校，跳过 Step 1-4",
+      "input": {
+        "user_message": "帮我审校这篇文章，降低 AI 味：\n\n{content_of: evals/files/sample-article-ai-heavy.md}",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "识别为审校快捷入口，跳过 Steps 1-4",
+        "直接加载 style-guide.md 和 checklist.md",
+        "执行三遍审校（内容 → 风格 → 细节），包含结构审校",
+        "审校报告在对话窗口展示",
+        "修订后全文在对话窗口输出"
+      ],
+      "expected_not": [
+        "不执行 Step 1-4",
+        "不保存审校报告到文件",
+        "不跳过任何一遍审校"
+      ]
+    },
+    {
+      "id": "brief-discrepancy-block",
+      "name": "briefs 差异阻断",
+      "description": "用户 briefs 含高风险事实，Step 2 应输出差异确认并阻断",
+      "input": {
+        "user_message": "基于 briefs 里的素材帮我写文章",
+        "briefs_files": ["evals/files/sample-brief-risky-facts.md"]
+      },
+      "expected_behavior": [
+        "Step 1 成功加载 briefs 文件，输出材料清单",
+        "Step 2 进入 brief_first_verify_mode",
+        "Stage A 提取候选事实，标记为 Tier 1 Candidate",
+        "Stage B 对高风险字段（产品名称、价格、版本）做定点核查",
+        "Stage C 发现差异，输出【差异确认】格式并阻断",
+        "等待用户确认后才继续 Step 3"
+      ],
+      "expected_not": [
+        "不把 Tier 1 Candidate 直接视为 Tier 1 Final",
+        "不在有差异时跳过阻断直接进入 Step 3",
+        "不遗漏高风险字段的核查"
+      ]
+    },
+    {
+      "id": "structure-check-valid",
+      "name": "标准结构通过校验",
+      "description": "符合规范的文章应通过 check_article.py 结构校验（无结构错误）",
+      "input": {
+        "article_file": "evals/files/sample-article-valid-structure.md",
+        "check_command": "python3 skill/scripts/check_article.py evals/files/sample-article-valid-structure.md"
+      },
+      "expected_behavior": [
+        "check_article.py 退出码为 0",
+        "无 [ERROR] 结构相关输出",
+        "输出包含 【文章质量检查通过】 或 【文章质量检查通过（含建议）】"
+      ],
+      "expected_not": [
+        "不输出 # 标题唯一性错误",
+        "不输出 ### 禁止使用错误",
+        "不输出缺少 ## 写在最后 的错误",
+        "不输出 #### 编号错误"
+      ]
+    },
+    {
+      "id": "structure-check-invalid-h3",
+      "name": "含 ### 的文章应检查失败",
+      "description": "包含 ### 标题的文章应被 check_article.py 检测为错误并退出码非零",
+      "input": {
+        "article_file": "evals/files/sample-article-invalid-h3.md",
+        "check_command": "python3 skill/scripts/check_article.py evals/files/sample-article-invalid-h3.md"
+      },
+      "expected_behavior": [
+        "check_article.py 退出码为 1",
+        "输出包含 ### 相关错误提示",
+        "stderr 包含 [ERROR] H3 (###) headings found"
+      ],
+      "expected_not": [
+        "不输出检查通过"
+      ]
+    },
+    {
+      "id": "structure-check-invalid-opening-h4",
+      "name": "开头段落含 #### 应检查失败",
+      "description": "开头段落（# 后、第一个 ## 前）出现 #### 应被检测为错误",
+      "input": {
+        "article_file": "evals/files/sample-article-invalid-opening-h4.md",
+        "check_command": "python3 skill/scripts/check_article.py evals/files/sample-article-invalid-opening-h4.md"
+      },
+      "expected_behavior": [
+        "check_article.py 退出码为 1",
+        "输出包含开头段落不允许出现 #### 的错误提示",
+        "stderr 包含 [ERROR] #### found in opening section"
+      ],
+      "expected_not": [
+        "不输出检查通过"
+      ]
+    },
+    {
+      "id": "structure-check-invalid-missing-conclusion",
+      "name": "缺少「写在最后」应检查失败",
+      "description": "没有 ## 写在最后 结尾章节的文章应被检测为错误",
+      "input": {
+        "article_file": "evals/files/sample-article-invalid-missing-conclusion.md",
+        "check_command": "python3 skill/scripts/check_article.py evals/files/sample-article-invalid-missing-conclusion.md"
+      },
+      "expected_behavior": [
+        "check_article.py 退出码为 1",
+        "输出包含缺少固定结尾章节的错误提示",
+        "stderr 包含 [ERROR] Missing required conclusion section"
+      ],
+      "expected_not": [
+        "不输出检查通过"
+      ]
+    },
+    {
+      "id": "structure-check-invalid-numbering",
+      "name": "#### 编号不从 ① 开始应检查失败",
+      "description": "#### 小标题编号不从 ① 开始或跳号的文章应被检测为错误",
+      "input": {
+        "article_file": "evals/files/sample-article-invalid-numbering.md",
+        "check_command": "python3 skill/scripts/check_article.py evals/files/sample-article-invalid-numbering.md"
+      },
+      "expected_behavior": [
+        "check_article.py 退出码为 1",
+        "输出包含编号错误的提示",
+        "stderr 包含 [ERROR] Numbering error"
+      ],
+      "expected_not": [
+        "不输出检查通过"
+      ]
+    },
+    {
+      "id": "structure-check-invalid-no-h4",
+      "name": "普通 ## 下没有 #### 应检查失败",
+      "description": "普通 ## 章节缺少 #### ① 小标题组的文章应被检测为错误",
+      "input": {
+        "article_file": "evals/files/sample-article-invalid-no-h4.md",
+        "check_command": "python3 skill/scripts/check_article.py evals/files/sample-article-invalid-no-h4.md"
+      },
+      "expected_behavior": [
+        "check_article.py 退出码为 1",
+        "输出包含普通章节缺少 #### 的错误提示",
+        "stderr 包含 [ERROR] Section ... has no #### subheadings"
+      ],
+      "expected_not": [
+        "不跳过没有 #### 的普通 ## 章节检查",
+        "不输出检查通过"
+      ]
+    },
+    {
+      "id": "card-post-hermes-release",
+      "name": "图卡模式：正常图卡生成",
+      "description": "用户提供爆款图卡参考样例，要求为新版本产品生成图卡文案，期望识别为 card_post 模式并完成事实核查和卡片生成",
+      "input": {
+        "user_message": "帮我给 Hermes Agent v0.16 出一套图卡，可以复制到图卡生成系统用。参考样式是公众号贴图风格，不超过 1000 字",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "Step 0 识别为 card_post 模式",
+        "Step 1 执行工作区检查，briefs 为空",
+        "Step 2 执行 publish_mode 调研，完成事实核查，输出 card_safe_claims 和 excluded_claims",
+        "输出【事实核查摘要】，列出已核查来源和可安全写入的事实",
+        "输出【卡片数量决策】，按信息单元决定卡片数，不固定 6 张",
+        "等待用户确认卡片数量后生成图卡文案",
+        "输出【图卡内容排版】，包含封面图卡和内容卡",
+        "总卡片数不超过 9 张",
+        "图卡内容排版字数不超过 1000 字",
+        "unverified claim 不出现在图卡正文"
+      ],
+      "expected_not": [
+        "不把 card_post 识别为 longform_article 模式",
+        "不跳过事实核查直接生成图卡",
+        "不固定输出 6 张或 9 张卡片",
+        "不把 excluded_claims 中的事实写入图卡正文",
+        "不输出公众号长文 Markdown 结构"
+      ]
+    },
+    {
+      "id": "card-post-no-official-source",
+      "name": "图卡模式：未核验事实阻断或排除",
+      "description": "用户提供含无法核验的数据（如「提速 180 倍」），期望 card_post 模式将其列入 excluded_claims，不写入图卡正文",
+      "input": {
+        "user_message": "帮我出一套图卡，介绍新版工具速度提升了 180 倍，还有全网首个自动化推理功能，用贴图格式",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "Step 0 识别为 card_post 模式",
+        "Step 2 事实核查发现「提速 180 倍」无官方来源支撑，标记为 excluded_claims",
+        "Step 2 事实核查发现「全网首个」无官方来源支撑，标记为 excluded_claims",
+        "输出【事实核查摘要】，在「不建议写入或必须弱化的事实」栏列出以上两条",
+        "图卡正文不出现「180 倍」等未核验数据",
+        "图卡正文不出现「全网首个」等绝对化表述",
+        "如仍能生成有效图卡则输出，否则提示用户补充可核验的信息"
+      ],
+      "expected_not": [
+        "不把未核验数据直接写入图卡正文",
+        "不把「全网首个」写入图卡",
+        "不跳过 excluded_claims 的输出",
+        "不为了凑内容把无法核验的事实改成模糊表达后塞进图卡"
+      ]
+    },
+    {
+      "id": "card-post-card-count",
+      "name": "图卡模式：卡片数量由信息单元决定",
+      "description": "复杂产品发布内容，期望卡片数量由信息单元决定，不固定 6 张，不超过 9 张",
+      "input": {
+        "user_message": "帮我出一套图卡，内容是 Claude Code v1.0 的新功能发布：新增 MCP 服务器支持、代码审查功能、多文件编辑、终端命令执行、Git 操作支持、任务跟踪系统，要贴图格式可以复制进图卡系统",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "Step 0 识别为 card_post 模式",
+        "Step 2 执行 publish_mode 调研，核查各功能的官方来源",
+        "输出【卡片数量决策】，说明每张卡对应的信息单元",
+        "卡片数量由有效信息单元数量决定，不强制为 6 张",
+        "如信息单元 <= 8 个，卡片总数不超过 9 张（含封面）",
+        "每张内容卡只有一个核心主题",
+        "卡片之间没有重复观点"
+      ],
+      "expected_not": [
+        "不固定输出 6 张卡片",
+        "不为了凑 9 张重复观点",
+        "不把多个不相关功能塞进同一张卡",
+        "不跳过卡片数量决策直接输出图卡"
+      ]
+    },
+    {
+      "id": "card-post-check-valid",
+      "name": "check_card_post.py 对合规样例通过",
+      "description": "符合规范的图卡输出文件应通过 check_card_post.py 校验",
+      "input": {
+        "article_file": "evals/files/sample-card-valid.txt",
+        "check_command": "python3 skill/scripts/check_card_post.py evals/files/sample-card-valid.txt"
+      },
+      "expected_behavior": [
+        "check_card_post.py 退出码为 0",
+        "输出包含【图卡质量检查通过】",
+        "校验通过封面图卡、Card 编号、字数、要点数量检查"
+      ],
+      "expected_not": [
+        "不输出 [ERROR] 错误",
+        "不输出检查失败"
+      ]
+    },
+    {
+      "id": "card-post-check-excluded-in-peizhi",
+      "name": "check_card_post.py 拦截【发布配文】中的 excluded_claims",
+      "description": "excluded_claims 中的关键词出现在【发布配文】时，--research 模式应检测并报错",
+      "input": {
+        "article_file": "evals/files/sample-card-excluded-in-peizhi.txt",
+        "check_command": "python3 skill/scripts/check_card_post.py evals/files/sample-card-excluded-in-peizhi.txt --research evals/files/sample-research-excluded.json"
+      },
+      "expected_behavior": [
+        "check_card_post.py 退出码为 1",
+        "stderr 包含 [ERROR] Excluded claim token '180 倍' found in public output",
+        "输出包含【图卡质量检查报告】",
+        "报告中提示 excluded_claims 关键词出现在发布内容"
+      ],
+      "expected_not": [
+        "不输出检查通过",
+        "不因【发布配文】不在图卡内容排版中而漏检"
+      ]
+    },
+    {
+      "id": "card-post-check-english-excluded",
+      "name": "check_card_post.py 拦截图卡正文中的英文模型名 excluded_claims",
+      "description": "DeepSeek-V4 等英文混合标识符出现在图卡正文且在 excluded_claims 中时，应被检测并报错",
+      "input": {
+        "article_file": "evals/files/sample-card-english-excluded.txt",
+        "check_command": "python3 skill/scripts/check_card_post.py evals/files/sample-card-english-excluded.txt --research evals/files/sample-research-excluded.json"
+      },
+      "expected_behavior": [
+        "check_card_post.py 退出码为 1",
+        "stderr 包含 [ERROR] Excluded claim token 'DeepSeek-V4' found in public output",
+        "输出包含【图卡质量检查报告】",
+        "报告中提示英文模型名关键词命中 excluded_claims"
+      ],
+      "expected_not": [
+        "不输出检查通过",
+        "不因 DeepSeek-V4 是英文/混合 token 而漏检"
+      ]
+    },
+    {
+      "id": "validate-research-tier2b-supported",
+      "name": "validate_research.py 拦截 tier 2b + status supported 的 claim",
+      "description": "第三方博客来源（Tier 2b）不得将 claim 标记为 supported；validate_research.py 应以退出码 1 拦截",
+      "input": {
+        "article_file": "evals/files/sample-research-tier2b.json",
+        "check_command": "python3 skill/scripts/validate_research.py evals/files/sample-research-tier2b.json"
+      },
+      "expected_behavior": [
+        "validate_research.py 退出码为 1",
+        "stderr 包含 [ERROR] claims[0] tier '2b' cannot be 'supported'",
+        "输出包含【调研质量校验失败】",
+        "报告中提示 tier 2b 不得标记为 supported"
+      ],
+      "expected_not": [
+        "不输出【调研质量校验通过】",
+        "不因 quality_check.passed 为 true 而漏检 tier 门禁"
+      ]
+    },
+    {
+      "id": "validate-research-tier2-int-supported",
+      "name": "validate_research.py 拦截 tier 整型 2 + status supported 的 claim",
+      "description": "旧 schema 整型 tier 2 在 Tier 2a/2b 拆分后不在白名单内，validate_research.py 应以退出码 1 拦截",
+      "input": {
+        "article_file": "evals/files/sample-research-tier2-int.json",
+        "check_command": "python3 skill/scripts/validate_research.py evals/files/sample-research-tier2-int.json"
+      },
+      "expected_behavior": [
+        "validate_research.py 退出码为 1",
+        "stderr 包含 [ERROR] claims[0] tier '2' cannot be 'supported'",
+        "输出包含【调研质量校验失败】",
+        "报告中提示 tier 2 不在白名单内"
+      ],
+      "expected_not": [
+        "不输出【调研质量校验通过】",
+        "不因整型 2 历史兼容而漏检或降级为 WARN"
+      ]
+    },
+    {
+      "id": "illustration-plan-existing-article",
+      "name": "章节配图：已有文章生成配图规划",
+      "description": "用户提供已有文章，要求按章节生成 SVG 配图，期望先输出配图大纲并等待确认，确认后才生成 SVG",
+      "input": {
+        "user_message": "给这篇文章按章节生成 SVG 配图，先给我配图大纲，确认后再生成",
+        "article_file": "evals/files/sample-article-illustration-units.md",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "识别为 illustration_extension，跳过 Step 1-4 写作流程",
+        "加载 references/illustration-config.md",
+        "按普通 ## 章节生成配图候选单元，共 4 个（排除开头段落和 ## 写在最后）",
+        "排除 ## 写在最后 章节",
+        "输出【章节配图规划】表格",
+        "每个配图项包含：核心观点、关键词、图表类型、svg-architect 风格、visual brief、插入位置",
+        "等待用户确认后才生成 SVG，等待期间不调用 svg-architect"
+      ],
+      "expected_not": [
+        "不调用 image2",
+        "不调用外部图片 API",
+        "不为 #### 单独配图",
+        "不为 ## 写在最后 生成配图",
+        "不为开头段落生成配图",
+        "未获用户确认前不生成 SVG",
+        "未获用户确认前不插入图片引用"
+      ]
+    },
+    {
+      "id": "illustration-semantic-classification",
+      "name": "章节配图：语义形态分类正确",
+      "description": "针对 sample-article-illustration-units.md，每个章节应被分类为正确的 diagram_type",
+      "input": {
+        "user_message": "给这篇文章按章节生成 SVG 配图大纲",
+        "article_file": "evals/files/sample-article-illustration-units.md",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "「从灵感到发布，中间断在哪里」被判定为 flowchart（步骤/流程形态）",
+        "「人工配图和自动配图的差异」被判定为 comparison（差异/权衡形态）",
+        "「一个完整系统包含哪些层」被判定为 layered_architecture（包含/分层形态）",
+        "「配图的本质是降低理解成本」被判定为 concept_diagram（抽象概念形态）"
+      ],
+      "expected_not": [
+        "不把流程章节判定为 bento_summary",
+        "不把对比章节判定为 flowchart",
+        "不把分层章节判定为 relationship_map"
+      ]
+    },
+    {
+      "id": "illustration-confirmation-gate",
+      "name": "章节配图：确认门禁阻断生成",
+      "description": "配图大纲展示后，未收到用户确认前不得生成 SVG 或写入图片引用",
+      "input": {
+        "user_message": "给这篇文章按章节生成 SVG 配图",
+        "article_file": "evals/files/sample-article-illustration-units.md",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "输出【章节配图规划】表格后明确等待用户确认",
+        "在等待确认阶段输出「请确认以上配图规划」或类似阻断提示",
+        "确认前不调用 svg-architect skill",
+        "确认前不修改文章内容，不插入图片引用"
+      ],
+      "expected_not": [
+        "不在输出大纲后自动进入 SVG 生成阶段",
+        "不在用户未明确确认时假设确认",
+        "不把配图大纲和 SVG 生成合并为一步完成"
+      ]
+    },
+    {
+      "id": "illustration-svg-architect-handoff",
+      "name": "章节配图：用户确认后调用 svg-architect",
+      "description": "用户确认配图规划后，正确调用 svg-architect skill 生成 SVG 并插入文章",
+      "input": {
+        "user_message": "确认，开始生成",
+        "article_file": "evals/files/sample-article-illustration-units.md",
+        "prior_context": "已输出配图规划，用户发送确认",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "用户确认后保存配图计划 JSON",
+        "运行 check_illustration_plan.py 校验通过后才调用 svg-architect",
+        "每张图指定 platform: wechat_article，尺寸 1200×500",
+        "输出文件路径为 workspace/images/{YYYYMMDD}-{slug}/{NN}-{section-slug}.svg",
+        "生成完成后将 Markdown 图片引用插入对应 ## 章节的 #### 小标题组之后"
+      ],
+      "expected_not": [
+        "不在 check_illustration_plan.py 校验前调用 svg-architect",
+        "不生成 PNG 作为主交付物",
+        "不使用 Base64 内联图片",
+        "不调用 image2 或外部图片 API",
+        "不把图片引用插入 ## 写在最后 章节",
+        "不把图片引用插入开头段落"
+      ]
+    },
+    {
+      "id": "illustration-plan-check-valid",
+      "name": "check_illustration_plan.py 对合规计划通过",
+      "description": "完整且合规的配图计划 JSON 应通过 check_illustration_plan.py 校验，退出码为 0",
+      "input": {
+        "article_file": "evals/files/sample-illustration-plan-valid.json",
+        "check_command": "python3 skill/scripts/check_illustration_plan.py evals/files/sample-illustration-plan-valid.json"
+      },
+      "expected_behavior": [
+        "check_illustration_plan.py 退出码为 0",
+        "输出包含【配图计划校验通过】"
+      ],
+      "expected_not": [
+        "不输出 [ERROR]",
+        "不输出【配图计划校验失败】"
+      ]
+    },
+    {
+      "id": "illustration-plan-check-invalid",
+      "name": "check_illustration_plan.py 对非法计划失败",
+      "description": "包含多种违规的计划 JSON 应被 check_illustration_plan.py 检测失败，退出码为 1。包含 item[0]（多字段违规）和 item[1]（../ 路径穿越）两类测试",
+      "input": {
+        "article_file": "evals/files/sample-illustration-plan-invalid.json",
+        "check_command": "python3 skill/scripts/check_illustration_plan.py evals/files/sample-illustration-plan-invalid.json"
+      },
+      "expected_behavior": [
+        "check_illustration_plan.py 退出码为 1",
+        "输出包含【配图计划校验失败】",
+        "stderr 包含 [ERROR] article_path is missing",
+        "stderr 包含 [ERROR] items[0] section_title contains conclusion section",
+        "stderr 包含 [ERROR] items[0] unit_id 'section1' does not match",
+        "stderr 包含 [ERROR] items[0] output_path must end with .svg",
+        "stderr 包含 [ERROR] items[0] output_path is not under output_dir",
+        "stderr 包含 [ERROR] items[0] invalid diagram_type",
+        "stderr 包含 [ERROR] items[0] invalid svg_style",
+        "stderr 包含 [ERROR] items[0] platform must be 'wechat_article'",
+        "stderr 包含 [ERROR] items[1] output_path contains '..' traversal"
+      ],
+      "expected_not": [
+        "不输出【配图计划校验通过】",
+        "不因 items[1] output_path 以 output_dir 为前缀而漏检 '../' 穿越",
+        "不因部分字段合法而漏检其余违规项"
+      ]
+    },
+    {
+      "id": "illustration-hashtag-sanitization-workflow",
+      "name": "章节配图：LLM 规划时不把 hashtag 写入 labels 和 keywords",
+      "description": "文章或发布配文含 #AI #Agent #HermesAgent #生产力 等话题标签时，LLM 生成配图规划不得把这些 hashtag 放入 labels[]、keywords[] 或 visual_brief",
+      "input": {
+        "user_message": "给这篇文章按章节生成 SVG 配图大纲，文章末尾发布配文含 #AI #Agent #HermesAgent #生产力",
+        "article_file": "evals/files/sample-article-illustration-units.md",
+        "briefs_files": []
+      },
+      "expected_behavior": [
+        "识别为 illustration_extension，加载 illustration-config.md",
+        "生成配图规划时，labels[] 不包含 #AI、#Agent、#HermesAgent、#生产力 等 hashtag token",
+        "生成配图规划时，keywords[] 不包含任何 # 开头的 token",
+        "visual_brief 中不出现连续 hashtag 段落，不把话题标签作为画面文字元素",
+        "输出【章节配图规划】表格，等待用户确认"
+      ],
+      "expected_not": [
+        "不把 #AI #Agent 等 hashtag 写入 labels[]",
+        "不把 #生产力 等话题标签写入 keywords[]",
+        "不把发布配文底部的 hashtag 行视为视觉关键词",
+        "不在未获用户确认时生成 SVG"
+      ]
+    },
+    {
+      "id": "illustration-plan-check-hashtag-invalid",
+      "name": "check_illustration_plan.py 拦截 labels/keywords 中的 hashtag token",
+      "description": "配图计划 JSON 的 labels[] 或 keywords[] 中含 #Agent、#AI 等 hashtag token 时，check_illustration_plan.py 应以退出码 1 拦截",
+      "input": {
+        "article_file": "evals/files/sample-illustration-plan-hashtag-invalid.json",
+        "check_command": "python3 skill/scripts/check_illustration_plan.py evals/files/sample-illustration-plan-hashtag-invalid.json"
+      },
+      "expected_behavior": [
+        "check_illustration_plan.py 退出码为 1",
+        "输出包含【配图计划校验失败】",
+        "stderr 包含 [ERROR] items[0] labels contain hashtag token '#Agent'",
+        "stderr 包含 [ERROR] items[0] keywords contain hashtag token '#AI'"
+      ],
+      "expected_not": [
+        "不输出【配图计划校验通过】",
+        "不因 hashtag 是中英混合而漏检",
+        "不把 hashtag 拦截降级为 WARN"
+      ]
+    },
+    {
+      "id": "illustration-plan-check-hashtag-space-invalid",
+      "name": "check_illustration_plan.py 拦截前导空格的 hashtag token",
+      "description": "labels[] 或 keywords[] 中含 ' #Agent'、' #AI' 等前导空格的 hashtag token 时，check_illustration_plan.py 应以退出码 1 拦截，不得因空格而绕过校验",
+      "input": {
+        "article_file": "evals/files/sample-illustration-plan-hashtag-space-invalid.json",
+        "check_command": "python3 skill/scripts/check_illustration_plan.py evals/files/sample-illustration-plan-hashtag-space-invalid.json"
+      },
+      "expected_behavior": [
+        "check_illustration_plan.py 退出码为 1",
+        "输出包含【配图计划校验失败】",
+        "stderr 包含 [ERROR] items[0] labels contain hashtag token '#Agent'",
+        "stderr 包含 [ERROR] items[0] keywords contain hashtag token '#AI'"
+      ],
+      "expected_not": [
+        "不输出【配图计划校验通过】",
+        "不因 ' #Agent' 有前导空格而跳过 ERROR",
+        "不因 ' #AI' 有前导空格而跳过 ERROR"
+      ]
+    }
+  ]
+}

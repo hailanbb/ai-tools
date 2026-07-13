@@ -35,6 +35,10 @@
                           "https://github.com/kangarooking/cangjie-skill":  {
                                                                                 "tool_name":  "cangjie-skill",
                                                                                 "imported_at":  "2026-07-13T22:54:00+08:00"
-                                                                            }
+                                                                            },
+                          "https://github.com/zhaodl1983/ai-write-flow":  {
+                                                                              "tool_name":  "ai-write-flow",
+                                                                              "imported_at":  "2026-07-13T22:58:00+08:00"
+                                                                          }
                       }
 }
