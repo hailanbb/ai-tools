@@ -20,6 +20,8 @@
     │   └── ai-write-flow/
     ├── productivity-developer/ # 效能与开发工具分类目录
     │   └── godogen/
+    ├── finance-investment/     # 金融理财分类目录
+    │   └── cyberagent/
     └── entertainment-lifestyle/# 趣味生活与个人助理分类目录
         └── mingli-master/
 ```
@@ -74,6 +76,14 @@
 | **godogen** | 基于 Godot、Bevy 与 Babylon.js 的自主游戏开发生成器，通过大模型生成 3D/2D 素材，并基于运行画面的录像回放进行闭环调试 | 当需要使用 AI 智能代理自动从零构建、生成素材并迭代调试 Godot 4、Bevy 或 Babylon.js 游戏项目时 | [👉 详细配置与使用指南](tools/productivity-developer/godogen/README.md) |
 | **prompt-optimizer** | 通过系统/用户提示词的评估、对比和多轮迭代优化，提升 AI 输出质量，支持文生图/图生图等视觉提示词调优，并提供 MCP 协议集成 | 当需要编写、迭代、优化大模型提示词，进行多模型输出效果对比测试，或为 AI 客户端接入提示词优化 MCP 服务时 | [👉 详细配置与使用指南](tools/productivity-developer/prompt-optimizer/README.md) |
 | **skills (Matt Pocock's)** | 面向 AI 智能体的工程实践技能集，包含意图对齐拷问（Grill）、测试驱动开发（TDD）以及 Bug 系统化诊断等防盲目编码技能 | 在 Agent 动笔写复杂需求代码前对齐意图、在项目开发中引入红绿 TDD 测试反馈环、或对复杂系统进行 Bug 深度诊断时 | [👉 详细配置与使用指南](tools/productivity-developer/skills/README.md) |
+
+### 📈 金融理财 (Finance & Investment)
+
+专注于金融市场行情、供应链瓶颈发现、全市场深度基本面与投资分析：
+
+| 工具名称 | 核心功能 | 触发场景 | 详细说明 |
+| :--- | :--- | :--- | :--- |
+| **cyberagent** | 物理瓶颈与反共识全市场投资分析框架，通过五层供应链与财务模型，避免叙事驱动的泡沫，寻找被低估的瓶颈所有者 | 需要对标的公司进行深度基本面与供应链约束分析，或需防范追高泡沫投资标的时 | [👉 详细配置与使用指南](tools/finance-investment/cyberagent/README.md) |
 
 ### 🔮 趣味生活与个人助理 (Entertainment & Lifestyle)
 
