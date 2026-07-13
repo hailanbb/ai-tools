@@ -39,8 +39,6 @@
 | **enquire-mcp** | 厂商中立、时效感知的 Obsidian 长期记忆与检索 MCP 服务，支持 BM25 + 本地向量检索与重排、Louvain 社区图谱增强，零云端调用 | 将个人 Obsidian 仓库配置为 AI 客户端（Cursor、Claude Code等）的本地时效感知长期记忆库时 | [👉 详细配置与使用指南](tools/mcp-servers/enquire-mcp/README.md) |
 | **fast-note-sync-service** | 支持原生 MCP 协议和 REST API 的高性能 Obsidian 多端实时同步与网页管理服务平台，打通 AI 对个人知识库的读写通道 | 将本地 Obsidian 笔记仓库发布或同步到远端，或接入 Cursor 等 AI 客户端的 MCP 协议读写笔记时 | [👉 详细配置与使用指南](tools/mcp-servers/fast-note-sync-service/README.md) |
 | **mcp-toolbox** | 数据库 MCP 服务与自定义工具框架，支持一键连接 PostgreSQL、MySQL 等关系型及非关系型数据库，提供安全 SQL 执行和 NL2SQL 能力 | 当 Agent 需要直接读取、查询或操作数据库（AlloyDB, BigQuery, Spanner, Postgres, MySQL 等），或需要构建安全的数据库交互工具时 | [👉 详细配置与使用指南](tools/mcp-servers/mcp-toolbox/README.md) |
-| **wps-office** | WPS Office 自动化操作工具 (Word/Excel/PPT) | 需要对本地文档、表格、幻灯片进行复杂内容写入与格式控制时 | *宿主环境自带/已配置* |
-| **notebooklm** | NotebookLM 知识库交互与研究助手 | 针对大量研究文档进行自动整理、音视频或多源材料交叉研究时 | *宿主环境自带/已配置* |
 
 ### 🌐 网络与检索工具 (Web & Retrieval Tools)
 
