@@ -27,6 +27,7 @@
 | **🌐 网页检索** | **Agent-Reach** | 一键为 Agent 接入全网（推特、Reddit、B站等）免 API 费用的阅读与搜索能力 | 当 Agent 需要阅读/搜索推特、总结视频字幕、刷小红书等，且不想折腾繁琐 API 时 | [👉 详细配置与使用指南](tools/agent-reach/README.md) |
 | **🕸️ 网页爬虫** | **Scrapling** | 高性能自适应网页抓取与解析框架，内置防爬绕过（Cloudflare）、无头浏览器自动化、并发 Spider 及 AI 友好 MCP 服务 | 需要对复杂网页（强动态加载、有反爬限制）进行大规模爬取，或为 AI 客户端提供网页数据提取 MCP 服务时 | [👉 详细配置与使用指南](tools/scrapling/README.md) |
 | **📝 写作编辑** | **humanizer-zh** | 基于维基百科 24 种 AI 写作特征检测规则，识别并去除中文文本的 AI 生成痕迹，智能润色出自然、鲜活且符合中文习惯的人性化文本 | 当需要改写 AI 腔调的文案、净化 AI 味文本、翻译或审校需要人情味的技术与博客长文时 | [👉 详细配置与使用指南](tools/humanizer-zh/README.md) |
+| **🔮 命理分析** | **mingli-master** | 结合 Python 的 iztro-py 库进行精准紫微斗数排盘，提供有温度的 LLM 命理及流年解读，并支持手相交叉比对与暗色星空主题的 HTML 可视化报告生成 | 当需要进行紫微斗数排盘、生辰八字性格运势分析、或上传掌纹进行命盘交叉比对时 | [👉 详细配置与使用指南](tools/mingli-master/README.md) |
 
 ---
 
