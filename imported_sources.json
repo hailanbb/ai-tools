@@ -27,6 +27,10 @@
                           "https://github.com/mattpocock/skills":  {
                                                                        "tool_name":  "skills",
                                                                        "imported_at":  "2026-07-13T22:48:00+08:00"
-                                                                   }
+                                                                   },
+                          "https://github.com/ljb1020/video-batch-download":  {
+                                                                                  "tool_name":  "video-batch-download",
+                                                                                  "imported_at":  "2026-07-13T22:52:00+08:00"
+                                                                              }
                       }
 }
