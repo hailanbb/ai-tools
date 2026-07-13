@@ -35,6 +35,7 @@
 | **🎮 游戏开发** | **godogen** | 基于 Godot、Bevy 与 Babylon.js 的自主游戏开发生成器，通过大模型生成 3D/2D 素材，并基于运行画面的录像回放进行闭环调试 | 当需要使用 AI 智能代理自动从零构建、生成素材并迭代调试 Godot 4、Bevy 或 Babylon.js 游戏项目时 | [👉 详细配置与使用指南](tools/godogen/README.md) |
 | **📚 知识管理** | **bili-note** | 提炼 B 站视频、音频转写、图文动态与评论，按信息量动态控制笔记预算，归档为 Markdown 知识笔记 | 提取、总结、整理 B 站视频/图文/动态内容，保存至本地或 Obsidian 知识库 | [👉 详细配置与使用指南](tools/bili-note/README.md) |
 | **🛠️ MCP服务** | **mcp-toolbox** | 数据库 MCP 服务与自定义工具框架，支持一键连接 PostgreSQL、MySQL 等关系型及非关系型数据库，提供安全 SQL 执行和 NL2SQL 能力 | 当 Agent 需要直接读取、查询或操作数据库（AlloyDB, BigQuery, Spanner, Postgres, MySQL 等），或需要构建安全的数据库交互工具时 | [👉 详细配置与使用指南](tools/mcp-toolbox/README.md) |
+| **🤖 智能体技能** | **mattpocock-skills** | 面向 AI 智能体的工程实践技能集，包含意图对齐拷问（Grill）、测试驱动开发（TDD）以及 Bug 系统化诊断等防盲目编码技能 | 在 Agent 动笔写复杂需求代码前对齐意图、在项目开发中引入红绿 TDD 测试反馈环、或对复杂系统进行 Bug 深度诊断时 | [👉 详细配置与使用指南](tools/skills/README.md) |
 
 ---
 

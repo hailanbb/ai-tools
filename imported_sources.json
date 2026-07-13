@@ -23,6 +23,10 @@
                           "https://github.com/googleapis/mcp-toolbox":  {
                                                                             "tool_name":  "mcp-toolbox",
                                                                             "imported_at":  "2026-07-13T22:47:00+08:00"
-                                                                        }
+                                                                        },
+                          "https://github.com/mattpocock/skills":  {
+                                                                       "tool_name":  "skills",
+                                                                       "imported_at":  "2026-07-13T22:48:00+08:00"
+                                                                   }
                       }
 }
