@@ -13,13 +13,26 @@
 ├── README.md                   # 全局工具索引概览（本文件）
 └── tools/                      # 统一的分类工具/技能存放目录
     ├── mcp-servers/            # MCP 工具分类目录
-    │   └── enquire-mcp/
+    │   ├── enquire-mcp/
+    │   ├── fast-note-sync-service/
+    │   └── mcp-toolbox/
     ├── web-retrieval/          # 网络与检索工具分类目录
-    │   └── agent-reach/
+    │   ├── agent-reach/
+    │   ├── anysearch-skill/
+    │   ├── bili-note/
+    │   ├── last30days-skill/
+    │   ├── scrapling/
+    │   └── video-batch-download/
     ├── office-creative/        # 办公与设计工具分类目录
-    │   └── ai-write-flow/
+    │   ├── ai-write-flow/
+    │   ├── cangjie-skill/
+    │   ├── gorden-ppt-skill/
+    │   ├── humanizer-zh/
+    │   └── taste-skill/
     ├── productivity-developer/ # 效能与开发工具分类目录
-    │   └── godogen/
+    │   ├── godogen/
+    │   ├── prompt-optimizer/
+    │   └── skills/
     ├── finance-investment/     # 金融理财分类目录
     │   └── cyberagent/
     └── entertainment-lifestyle/# 趣味生活与个人助理分类目录
