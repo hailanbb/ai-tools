@@ -99,6 +99,7 @@
 | 工具名称 | 核心功能 | 触发场景 | 详细说明 |
 | :--- | :--- | :--- | :--- |
 | **claude-for-legal-ZH** | 面向中国法律体系的 AI Agent 与技能库，涵盖合同审查、数据合规、诉讼准备、主体信用穿透及元典 MCP 法规检索 | 进行商事合同审查、企业数据合规体检、民商事诉讼准备或法律检索问答时 | [👉 详细配置与使用指南](tools/office-creative/claude-for-legal-ZH/README.md) |
+| **ppt-master** | 运行于 AI Agent 中的原生 PowerPoint 演示文稿生成工作流，支持 PDF/DOCX/Markdown/URL 等材料直接生成包含原生母版、动态与声音的 `.pptx` | 需要将文档、课题或网页材料转为真正可编辑的原生 PowerPoint (.pptx) 演示文稿，且包含图表、动画及配音时 | [👉 详细配置与使用指南](tools/office-creative/ppt-master/README.md) |
 | **dashi-ppt-skill** | 大师 PPT 生成技能，内置 12 套视觉主题与 1020 个专业版式，生成带在线编辑器的离线 HTML 网页并可一键导出为原生可编辑 `.pptx` 与 PDF | Agent 快速生成结构化演示文稿，在网页控制台就地微调布局、文本与图片，或需要导出为 `.pptx` 交付时 | [👉 详细配置与使用指南](tools/office-creative/dashi-ppt-skill/README.md) |
 | **figedit** | AI 图像解构与矢量重建技能，将截图、架构图、海报及 AI 生成图片重构为可编辑的分层 SVG 矢量图与原生 `.pptx` | 需要修改压平图片的文字/形状/公式、快速复刻论文配图或修改 AI 生成图片的布局时 | [👉 详细配置与使用指南](tools/office-creative/figedit/README.md) |
 | **vibe-resume-skill** | AI 简历生成与 12 套 A4 模板美化排版 Skill，支持经历事实提取、单页垂直平衡与针对不同 JD 导出版本 | 需要从零构建简历、更新已有简历且不破坏一页排版，或针对特定岗位 (JD) 调整简历侧重点时 | [👉 详细配置与使用指南](tools/office-creative/vibe-resume-skill/README.md) |
