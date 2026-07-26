@@ -21,6 +21,7 @@
     │   ├── anysearch-skill/
     │   ├── bili-note/
     │   ├── last30days-skill/
+    │   ├── maigret/
     │   ├── scrapling/
     │   ├── video-batch-download/
     │   └── z-skills/
@@ -74,6 +75,7 @@
 | **Scrapling** | 高性能自适应网页抓取与解析框架，内置防爬绕过（Cloudflare）、无头浏览器自动化、并发 Spider 及 AI 友好 MCP 服务 | 需要对复杂网页（强动态加载、有反爬限制）进行大规模爬取，或为 AI 客户端提供网页数据提取 MCP 服务时 | [👉 详细配置与使用指南](tools/web-retrieval/scrapling/README.md) |
 | **anysearch-skill** | 为 AI 智能体提供统一的搜索引擎层，支持通用全网检索、社交媒体垂直发现、多句并发批量搜索，以及网页内容纯净化提取 Markdown | 当 Agent 需要实时上网检索多条背景信息、总结网页内容、或在社交平台上进行深度舆情发现时 | [👉 详细配置与使用指南](tools/web-retrieval/anysearch-skill/README.md) |
 | **last30days-skill** | 基于点赞、预测赔率等真实反馈对信息加权打分，提供过去 30 天跨社交平台（Reddit、X、YouTube 视频转录等）的聚类搜索与舆情提炼 | 需要对人物、产品、事件或技术进行深度近况侧写，或者对近期社交媒体上的爆点与趋势进行横向监控时 | [👉 详细配置与使用指南](tools/web-retrieval/last30days-skill/README.md) |
+| **maigret** | 基于公开用户名跨 3000+ 站点进行公开账号查找与关联信息提取，生成 HTML 交互地图与 PDF 档案报告 | 根据已知用户名发现其公开社交账号、生成公开档案及进行跨平台轨迹提炼时 | [👉 详细配置与使用指南](tools/web-retrieval/maigret/README.md) |
 | **bili-note** | 提炼 B 站视频、音频转写、图文动态与评论，按信息量动态控制笔记预算，归档为 Markdown 知识笔记 | 提取、总结、整理 B 站视频/图文/动态内容，保存至本地或 Obsidian 知识库 | [👉 详细配置与使用指南](tools/web-retrieval/bili-note/README.md) |
 | **video-batch-download** | 多平台（抖音、B站、小红书）公开视频批量下载与本地语音转写工具，支持分离流合并，本地 faster-whisper 转录和结构化输出 | 批量下载抖音/B站/小红书公开视频，或转录音频内容为文本进行后续分析时 | [👉 详细配置与使用指南](tools/web-retrieval/video-batch-download/README.md) |
 | **z-skills** | 面向中文创作与自动化任务的技能套件，涵盖网页与视频素材采集下载、多模态学习、文档/表格转换与编辑、邮件处理及证据型问答 | 批量采集网页素材、下载全平台视频、文档与表格格式互转、邮件处理及本地证据问答时 | [👉 详细配置与使用指南](tools/web-retrieval/z-skills/README.md) |
