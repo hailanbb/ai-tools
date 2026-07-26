@@ -67,6 +67,10 @@
                           "https://github.com/tjxj/z-skills":  {
                                                                    "tool_name":  "z-skills",
                                                                    "imported_at":  "2026-07-26T15:09:02+08:00"
-                                                               }
+                                                               },
+                          "https://github.com/DietrichGebert/ponytail":  {
+                                                                           "tool_name":  "ponytail",
+                                                                           "imported_at":  "2026-07-26T15:15:22+08:00"
+                                                                       }
                       }
 }
