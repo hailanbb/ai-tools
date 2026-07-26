@@ -115,6 +115,10 @@
                           "https://github.com/wbh604/UZI-Skill":  {
                                                                      "tool_name":  "uzi-skill",
                                                                      "imported_at":  "2026-07-26T16:51:24+08:00"
-                                                                 }
+                                                                 },
+                          "https://github.com/Jesseovo/last30days-skill-cn":  {
+                                                                                 "tool_name":  "last30days-skill-cn",
+                                                                                 "imported_at":  "2026-07-26T21:19:47+08:00"
+                                                                             }
                       }
 }
