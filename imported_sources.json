@@ -111,6 +111,10 @@
                           "https://github.com/colbymchenry/codegraph":  {
                                                                           "tool_name":  "codegraph",
                                                                           "imported_at":  "2026-07-26T16:45:09+08:00"
-                                                                      }
+                                                                      },
+                          "https://github.com/wbh604/UZI-Skill":  {
+                                                                     "tool_name":  "uzi-skill",
+                                                                     "imported_at":  "2026-07-26T16:51:24+08:00"
+                                                                 }
                       }
 }

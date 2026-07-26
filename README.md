@@ -49,7 +49,8 @@
     │   ├── skills/
     │   └── superpowers/
     ├── finance-investment/     # 金融理财分类目录
-    │   └── cyberagent/
+    │   ├── cyberagent/
+    │   └── uzi-skill/
     └── entertainment-lifestyle/# 趣味生活与个人助理分类目录
         ├── cyber-divination/
         ├── mingli-master/
@@ -128,7 +129,8 @@
 
 | 工具名称 | 核心功能 | 触发场景 | 详细说明 |
 | :--- | :--- | :--- | :--- |
-| **cyberagent** | 物理瓶颈与反共识全市场投资分析框架，通过五层供应链与财务模型，避免叙事驱动的泡沫，寻找被低估的瓶颈所有者 | 需要对标的公司进行深度基本面与供应链约束分析，或需防范追高泡沫投资标的时 | [👉 详细配置与使用指南](tools/finance-investment/cyberagent/README.md) |
+| **cyberagent** | 金融数据查询与分析 MCP 智能体，集成多数据源检索、因子分析与行情洞察 | 需要获取金融市场实时数据、进行股票/基金多维度分析与投资策略回测时 | [👉 详细配置与使用指南](tools/finance-investment/cyberagent/README.md) |
+| **uzi-skill** | 游资 UZI 66 评审团多维股票深度分析与量化研报引擎，涵盖 22 维数据、9 大流派评审团、DCF 估值与杀猪盘排查 | 对 A 股/港股/美股个股进行全方位多维度深度诊断、风险排查、DCF 估值及生成离线 HTML 研报时 | [👉 详细配置与使用指南](tools/finance-investment/uzi-skill/README.md) |
 
 ### 🔮 趣味生活与个人助理 (Entertainment & Lifestyle)
 
