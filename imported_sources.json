@@ -71,6 +71,10 @@
                           "https://github.com/DietrichGebert/ponytail":  {
                                                                            "tool_name":  "ponytail",
                                                                            "imported_at":  "2026-07-26T15:15:22+08:00"
-                                                                       }
+                                                                       },
+                          "https://github.com/chuspeeism/dashi-ppt-skill":  {
+                                                                               "tool_name":  "dashi-ppt-skill",
+                                                                               "imported_at":  "2026-07-26T15:19:50+08:00"
+                                                                           }
                       }
 }
