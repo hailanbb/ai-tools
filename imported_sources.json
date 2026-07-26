@@ -91,6 +91,10 @@
                           "https://github.com/Aham-AIAPP/aham-voice":  {
                                                                           "tool_name":  "aham-voice",
                                                                           "imported_at":  "2026-07-26T16:04:27+08:00"
-                                                                      }
+                                                                      },
+                          "https://github.com/msitarzewski/agency-agents":  {
+                                                                              "tool_name":  "agency-agents",
+                                                                              "imported_at":  "2026-07-26T16:12:57+08:00"
+                                                                          }
                       }
 }
