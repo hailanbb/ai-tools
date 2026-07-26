@@ -75,6 +75,10 @@
                           "https://github.com/chuspeeism/dashi-ppt-skill":  {
                                                                                "tool_name":  "dashi-ppt-skill",
                                                                                "imported_at":  "2026-07-26T15:19:50+08:00"
-                                                                           }
+                                                                           },
+                          "https://github.com/CSlawyer1985/claude-for-legal-ZH":  {
+                                                                                    "tool_name":  "claude-for-legal-ZH",
+                                                                                    "imported_at":  "2026-07-26T15:21:06+08:00"
+                                                                                }
                       }
 }
