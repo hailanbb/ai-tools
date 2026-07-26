@@ -79,6 +79,10 @@
                           "https://github.com/CSlawyer1985/claude-for-legal-ZH":  {
                                                                                     "tool_name":  "claude-for-legal-ZH",
                                                                                     "imported_at":  "2026-07-26T15:21:06+08:00"
-                                                                                }
+                                                                                },
+                          "https://github.com/giszzt/figedit":  {
+                                                                   "tool_name":  "figedit",
+                                                                   "imported_at":  "2026-07-26T15:26:02+08:00"
+                                                               }
                       }
 }
