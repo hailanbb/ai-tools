@@ -49,7 +49,9 @@
     ├── finance-investment/     # 金融理财分类目录
     │   └── cyberagent/
     └── entertainment-lifestyle/# 趣味生活与个人助理分类目录
-        └── mingli-master/
+        ├── cyber-divination/
+        ├── mingli-master/
+        └── nihaixia/
 ```
 
 ---
@@ -131,6 +133,8 @@
 | 工具名称 | 核心功能 | 触发场景 | 详细说明 |
 | :--- | :--- | :--- | :--- |
 | **mingli-master** | 结合 Python 的 iztro-py 库进行精准紫微斗数排盘，提供有温度的 LLM 命理及流年解读，并支持手相交叉比对与暗色星空主题的 HTML 可视化报告生成 | 当需要进行紫微斗数排盘、生辰八字性格运势分析、或上传掌纹进行命盘交叉比对时 | [👉 详细配置与使用指南](tools/entertainment-lifestyle/mingli-master/README.md) |
+| **cyber-divination** | 赛博算命与易经占卜技能，支持梅花易数、六爻八卦、紫微斗数及塔罗占卜，自动起卦并提供白话与象数交融的解卦分析 | 用户寻求易经占卜、每日运势测算、决策吉凶分析或心理指引时 | [👉 详细配置与使用指南](tools/entertainment-lifestyle/cyber-divination/README.md) |
+| **nihaixia** | 倪海厦经方中医 AI Agent 技能（3.5M 字蒸馏心法），集成六经辨证诊断公式、849 例临床医案及经方选药 | 当需要以倪海厦视角进行六经辨证、经方推导、医案检索及健康养生建议时 | [👉 详细配置与使用指南](tools/entertainment-lifestyle/nihaixia/README.md) |
 
 ---
 

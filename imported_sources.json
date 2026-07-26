@@ -99,6 +99,10 @@
                           "https://github.com/obra/superpowers":  {
                                                                      "tool_name":  "superpowers",
                                                                      "imported_at":  "2026-07-26T16:14:37+08:00"
-                                                                 }
+                                                                 },
+                          "https://github.com/jangviktor-web/nihaixia":  {
+                                                                           "tool_name":  "nihaixia",
+                                                                           "imported_at":  "2026-07-26T16:26:05+08:00"
+                                                                       }
                       }
 }
