@@ -59,6 +59,10 @@
                           "https://github.com/multica-ai/andrej-karpathy-skills":  {
                                                                                       "tool_name":  "andrej-karpathy-skills",
                                                                                       "imported_at":  "2026-07-16T23:44:14+08:00"
+                                                                                  },
+                          "https://github.com/idiotLeoLYJ/Daliu-Awesome-Skills":  {
+                                                                                      "tool_name":  "Daliu-Awesome-Skills",
+                                                                                      "imported_at":  "2026-07-26T09:10:15+08:00"
                                                                                   }
                       }
 }

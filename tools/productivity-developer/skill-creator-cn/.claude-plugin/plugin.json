@@ -1,0 +1,9 @@
+{
+  "name": "skill-creator-cn",
+  "displayName": "Skill Creator (中文)",
+  "version": "1.0.0",
+  "description": "中文优先、自适应用户水平的引导式 skill 创作工具：前置闸门 + 多入口需求挖掘 + 分层验证 + 最后一公里安装指引。把模糊想法逼成可用 skill。",
+  "author": {
+    "name": "Daliu"
+  }
+}

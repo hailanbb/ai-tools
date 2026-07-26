@@ -28,11 +28,14 @@
     │   ├── cangjie-skill/
     │   ├── gorden-ppt-skill/
     │   ├── humanizer-zh/
-    │   └── taste-skill/
+    │   ├── taste-skill/
+    │   └── ten-step-learning/
     ├── productivity-developer/ # 效能与开发工具分类目录
     │   ├── andrej-karpathy-skills/
     │   ├── godogen/
     │   ├── prompt-optimizer/
+    │   ├── qima/
+    │   ├── skill-creator-cn/
     │   └── skills/
     ├── finance-investment/     # 金融理财分类目录
     │   └── cyberagent/
@@ -80,6 +83,7 @@
 | **taste-skill** | 提供反模板化的 AI 前端美学设计规范与 GSAP 交互骨架，支持风格拨盘调节，指导智能体产出高品质的 UI 页面 | 当需要编写、重构或优化网页 UI，且希望纠正 AI 生成的低级、重复及廉价模板风格的前端界面时 | [👉 详细配置与使用指南](tools/office-creative/taste-skill/README.md) |
 | **humanizer-zh** | 基于维基百科 24 种 AI 写作特征检测规则，识别并去除中文文本的 AI 生成痕迹，智能润色出自然、鲜活且符合中文习惯的人性化文本 | 当需要改写 AI 腔调的文案、净化 AI 味文本、翻译或审校需要人情味的技术与博客长文时 | [👉 详细配置与使用指南](tools/office-creative/humanizer-zh/README.md) |
 | **cangjie-skill** | 基于 RIA-TV++ 管道的方法论蒸馏工具，支持从书籍、长视频转录、播客等文本中，抽取、验证并构建高执行力的 AI 技能卡（SKILL.md） | 当需要系统性分析一本书或一个知识视频/播客，并将其提炼为可在 Agent 中被场景触发的模块化执行工具时 | [👉 详细配置与使用指南](tools/office-creative/cangjie-skill/README.md) |
+| **ten-step-learning** | 基于 STORM 架构的十步自适应学习与知识图谱构建工具，提炼 20% 核心原理并生成一页 HTML 速查卡片 | 快速研究新主题、梳理知识框架、生成单文件网页速查表时 | [👉 详细配置与使用指南](tools/office-creative/ten-step-learning/README.md) |
 
 ### 🛠️ 效能与开发工具 (Productivity & Developer Tools)
 
@@ -91,6 +95,8 @@
 | **godogen** | 基于 Godot、Bevy 与 Babylon.js 的自主游戏开发生成器，通过大模型生成 3D/2D 素材，并基于运行画面的录像回放进行闭环调试 | 当需要使用 AI 智能代理自动从零构建、生成素材并迭代调试 Godot 4、Bevy 或 Babylon.js 游戏项目时 | [👉 详细配置与使用指南](tools/productivity-developer/godogen/README.md) |
 | **prompt-optimizer** | 通过系统/用户提示词的评估、对比和多轮迭代优化，提升 AI 输出质量，支持文生图/图生图等视觉提示词调优，并提供 MCP 协议集成 | 当需要编写、迭代、优化大模型提示词，进行多模型输出效果对比测试，或为 AI 客户端接入提示词优化 MCP 服务时 | [👉 详细配置与使用指南](tools/productivity-developer/prompt-optimizer/README.md) |
 | **skills (Matt Pocock's)** | 面向 AI 智能体的工程实践技能集，包含意图对齐拷问（Grill）、测试驱动开发（TDD）以及 Bug 系统化诊断等防盲目编码技能 | 在 Agent 动笔写复杂需求代码前对齐意图、在项目开发中引入红绿 TDD 测试反馈环、或对复杂系统进行 Bug 深度诊断时 | [👉 详细配置与使用指南](tools/productivity-developer/skills/README.md) |
+| **qima** | 契约式 Vibe Coding 流程套件，基于 Next.js + CloudBase 提供从 Idea 到 Implement 的 6 阶段契约交付 | 进行现代 Web 应用 Vibe Coding 开发，从需求概念、交互架构到原型全栈交付时 | [👉 详细配置与使用指南](tools/productivity-developer/qima/README.md) |
+| **skill-creator-cn** | 针对中文语境优化的 AI Agent Skill 创作、重构、评估与描述调优工具 | 编写新的 Agent Skill、重构已有技能、进行评测调试与触发率优化时 | [👉 详细配置与使用指南](tools/productivity-developer/skill-creator-cn/README.md) |
 
 ### 📈 金融理财 (Finance & Investment)
 

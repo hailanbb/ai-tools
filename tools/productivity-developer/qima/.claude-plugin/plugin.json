@@ -1,0 +1,9 @@
+{
+  "name": "qima",
+  "displayName": "齐码 · Vibe Coding 流水线",
+  "version": "1.0.0",
+  "description": "专用于 Vibe Coding 的六步流水线套件：idea → interaction → architecture → design → prototype → implement。核心是对齐（契约式设计）——每个 skill 的入口必定是上一个 skill 的产物，逐环确定式交接，把一个想法推进到高级审美、能跑且实现=设计的产品。6 个 skill 需整套安装。",
+  "author": {
+    "name": "Daliu"
+  }
+}
