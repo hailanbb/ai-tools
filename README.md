@@ -39,6 +39,7 @@
     ├── productivity-developer/ # 效能与开发工具分类目录
     │   ├── agency-agents/
     │   ├── andrej-karpathy-skills/
+    │   ├── codegraph/
     │   ├── easy-vibe/
     │   ├── godogen/
     │   ├── ponytail/
@@ -111,6 +112,7 @@
 | :--- | :--- | :--- | :--- |
 | **agency-agents** | 全领域 AI 专家 Agent 团队套件（The Agency），包含工程、设计、安全、营销、金融等 20+ 领域专家 Agent 角色及自动化格式转换安装脚本 | 需要组建多角色 AI Agent 专家团队协作、按岗位精准安装 Agent 插件或导出至不同客户端时 | [👉 详细配置与使用指南](tools/productivity-developer/agency-agents/README.md) |
 | **andrej-karpathy-skills** | 受 Karpathy 启发、面向 AI 智能体的行为控制原则与最佳实践，包含 Claude Code 插件与 Cursor 项目规则，纠正 LLM 开发中的错误假设、过度复杂、无关改动与缺少验证等陷阱 | 当需要限制 AI Agent 的编码边界、在复杂任务执行前对齐假设、让其保持极简编码并使用测试进行循环验证时 | [👉 详细配置与使用指南](tools/productivity-developer/andrej-karpathy-skills/README.md) |
+| **codegraph** | 基于 Rust 内核的本地代码语义图谱与 Agent 上下文引擎，提供精准的代码调用链推导、框架路由解析及 MCP 接口服务 | 当需要为 Agent 提供全库代码语义理解、追踪函数调用依赖、进行 PR 影响推导或集成 MCP 接口时 | [👉 详细配置与使用指南](tools/productivity-developer/codegraph/README.md) |
 | **easy-vibe** | Datawhale 开源的 AI 驱动编程 (Vibe Coding) 零基础交互教程与 Agent 开发套件，包含 10 种语言文档、IDE 模拟器与 RAG 可视化 | 零基础学习 AI 辅助编程 (Vibe Coding)、理解 Agent 协同工作流、RAG 原理或搭建 OpenClaw 智能体时 | [👉 详细配置与使用指南](tools/productivity-developer/easy-vibe/README.md) |
 | **ponytail** | AI Agent 极简编码与行为治理工具，模拟资深开发者思维梯子（YAGNI -> 代码复用 -> 标准库 -> 原生 API），平均减少 54% 冗余代码 | 约束 AI 编码边界、防止大模型过度设计与滥用第三方依赖、追求极简干净代码时 | [👉 详细配置与使用指南](tools/productivity-developer/ponytail/README.md) |
 | **superpowers** | Agent 软件开发方法论与技能套件（Superpowers），提供需求 Spec 交互式提炼、TDD 红绿循环驱动与 Subagent 子任务分工协作 | 当需要约束 AI Agent 进行规范化敏捷开发、防止盲目编写代码、执行 TDD 测试驱动与子 Agent 协同研发时 | [👉 详细配置与使用指南](tools/productivity-developer/superpowers/README.md) |
