@@ -103,6 +103,10 @@
                           "https://github.com/jangviktor-web/nihaixia":  {
                                                                            "tool_name":  "nihaixia",
                                                                            "imported_at":  "2026-07-26T16:26:05+08:00"
-                                                                       }
+                                                                       },
+                          "https://github.com/datawhalechina/easy-vibe":  {
+                                                                            "tool_name":  "easy-vibe",
+                                                                            "imported_at":  "2026-07-26T16:40:51+08:00"
+                                                                        }
                       }
 }

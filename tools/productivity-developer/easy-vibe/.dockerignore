@@ -1,0 +1,13 @@
+# Easy-Vibe 魔搭创空间部署：排除不需要打入镜像的文件和目录
+node_modules
+.git
+.github
+.husky
+.trae
+.vscode
+docs/.vitepress/dist
+docs/.vitepress/cache
+temp
+assets
+.claude
+docs-readme

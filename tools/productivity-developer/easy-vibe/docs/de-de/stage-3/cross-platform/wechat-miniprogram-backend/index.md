@@ -1,0 +1,3 @@
+# Plattformübergreifende Entwicklung - Wie man ein WeChat Mini-Programm erstellt (mit Backend)
+
+> Dieses Kapitel wird derzeit verfasst. Bleiben Sie dran...
