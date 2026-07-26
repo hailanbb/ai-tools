@@ -44,7 +44,8 @@
     │   ├── prompt-optimizer/
     │   ├── qima/
     │   ├── skill-creator-cn/
-    │   └── skills/
+    │   ├── skills/
+    │   └── superpowers/
     ├── finance-investment/     # 金融理财分类目录
     │   └── cyberagent/
     └── entertainment-lifestyle/# 趣味生活与个人助理分类目录
@@ -108,6 +109,7 @@
 | **agency-agents** | 全领域 AI 专家 Agent 团队套件（The Agency），包含工程、设计、安全、营销、金融等 20+ 领域专家 Agent 角色及自动化格式转换安装脚本 | 需要组建多角色 AI Agent 专家团队协作、按岗位精准安装 Agent 插件或导出至不同客户端时 | [👉 详细配置与使用指南](tools/productivity-developer/agency-agents/README.md) |
 | **andrej-karpathy-skills** | 受 Karpathy 启发、面向 AI 智能体的行为控制原则与最佳实践，包含 Claude Code 插件与 Cursor 项目规则，纠正 LLM 开发中的错误假设、过度复杂、无关改动与缺少验证等陷阱 | 当需要限制 AI Agent 的编码边界、在复杂任务执行前对齐假设、让其保持极简编码并使用测试进行循环验证时 | [👉 详细配置与使用指南](tools/productivity-developer/andrej-karpathy-skills/README.md) |
 | **ponytail** | AI Agent 极简编码与行为治理工具，模拟资深开发者思维梯子（YAGNI -> 代码复用 -> 标准库 -> 原生 API），平均减少 54% 冗余代码 | 约束 AI 编码边界、防止大模型过度设计与滥用第三方依赖、追求极简干净代码时 | [👉 详细配置与使用指南](tools/productivity-developer/ponytail/README.md) |
+| **superpowers** | Agent 软件开发方法论与技能套件（Superpowers），提供需求 Spec 交互式提炼、TDD 红绿循环驱动与 Subagent 子任务分工协作 | 当需要约束 AI Agent 进行规范化敏捷开发、防止盲目编写代码、执行 TDD 测试驱动与子 Agent 协同研发时 | [👉 详细配置与使用指南](tools/productivity-developer/superpowers/README.md) |
 | **godogen** | 基于 Godot、Bevy 与 Babylon.js 的自主游戏开发生成器，通过大模型生成 3D/2D 素材，并基于运行画面的录像回放进行闭环调试 | 当需要使用 AI 智能代理自动从零构建、生成素材并迭代调试 Godot 4、Bevy 或 Babylon.js 游戏项目时 | [👉 详细配置与使用指南](tools/productivity-developer/godogen/README.md) |
 | **prompt-optimizer** | 通过系统/用户提示词的评估、对比和多轮迭代优化，提升 AI 输出质量，支持文生图/图生图等视觉提示词调优，并提供 MCP 协议集成 | 当需要编写、迭代、优化大模型提示词，进行多模型输出效果对比测试，或为 AI 客户端接入提示词优化 MCP 服务时 | [👉 详细配置与使用指南](tools/productivity-developer/prompt-optimizer/README.md) |
 | **skills (Matt Pocock's)** | 面向 AI 智能体的工程实践技能集，包含意图对齐拷问（Grill）、测试驱动开发（TDD）以及 Bug 系统化诊断等防盲目编码技能 | 在 Agent 动笔写复杂需求代码前对齐意图、在项目开发中引入红绿 TDD 测试反馈环、或对复杂系统进行 Bug 深度诊断时 | [👉 详细配置与使用指南](tools/productivity-developer/skills/README.md) |
