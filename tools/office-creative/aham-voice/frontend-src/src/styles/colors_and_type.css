@@ -1,0 +1,168 @@
+/* =============================================================================
+   Aham — Element-level Type Styles
+   Maps semantic HTML elements onto the official aham-ui.css typography tokens.
+   Import AFTER aham-ui.css (which owns the :root token values). The official
+   component CSS styles only `body` at the element level, so this layer supplies
+   the bare-element defaults (headings, paragraphs, lists, quotes, code, tables)
+   that rendered markdown and prose rely on.
+
+   No serif anywhere — emphasis is sans-italic. Colors come from tokens only.
+   ============================================================================= */
+
+/* Headings — sans, tight tracking, generous space above */
+h1, .h1 {
+  font-family: var(--font-sans-display);
+  font-size: var(--text-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+}
+h2, .h2 {
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+}
+h3, .h3 {
+  font-size: var(--text-2xl);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+}
+h4, .h4 {
+  font-size: var(--text-xl);
+  line-height: 1.3;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+}
+h5, .h5 {
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  font-weight: var(--w-semibold);
+  color: var(--ink);
+}
+h6, .h6 {
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  font-weight: var(--w-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* Body / paragraphs */
+p, .p {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+p + p { margin-top: var(--s4); }
+
+/* Inline */
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-3);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-fast) var(--ease-standard);
+}
+a:hover { text-decoration-color: var(--accent); }
+
+strong, b { font-weight: var(--w-semibold); }
+em, i    { font-style: italic; }
+small    { font-size: var(--text-xs); color: var(--ink-2); }
+
+/* Lists */
+ul, ol {
+  padding-left: var(--s5);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+ul { list-style: disc; }
+ol { list-style: decimal; }
+li + li { margin-top: var(--s1); }
+li::marker { color: var(--ink-4); }
+
+/* Quote — no serif; an accent-free left rule and muted ink carry the emphasis */
+blockquote {
+  margin: var(--s6) 0;
+  padding-left: var(--s5);
+  border-left: 2px solid var(--ink-3);
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* Code */
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+:not(pre) > code {
+  padding: 0.1em 0.35em;
+  background: var(--fill-hover);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xs);
+  color: var(--ink);
+}
+pre {
+  margin: var(--s5) 0;
+  padding: var(--s4) var(--s5);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  color: var(--ink);
+  overflow-x: auto;
+}
+kbd {
+  padding: 0.1em 0.45em;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: var(--r-xs);
+  font-size: 0.85em;
+}
+
+/* Rules */
+hr {
+  margin: var(--s6) 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Tables — horizontal hairlines only (DESIGN.md doc-table rule). No vertical
+   rules, no full-row fills. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+th, td {
+  padding: var(--s3) var(--s4);
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+th { font-weight: var(--w-semibold); color: var(--ink-2); }
+
+/* =============================================================================
+   NO-WRAP RULES — atomic UI never breaks across lines
+   A tag, badge, button, or kbd is a single visual unit and must never split.
+   ============================================================================= */
+.tag, .badge,
+button, .button,
+kbd,
+[data-nowrap] {
+  white-space: nowrap;
+}

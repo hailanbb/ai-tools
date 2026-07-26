@@ -87,6 +87,10 @@
                           "https://github.com/soxoj/maigret":  {
                                                                    "tool_name":  "maigret",
                                                                    "imported_at":  "2026-07-26T15:57:26+08:00"
-                                                               }
+                                                               },
+                          "https://github.com/Aham-AIAPP/aham-voice":  {
+                                                                          "tool_name":  "aham-voice",
+                                                                          "imported_at":  "2026-07-26T16:04:27+08:00"
+                                                                      }
                       }
 }
