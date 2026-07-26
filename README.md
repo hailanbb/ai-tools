@@ -36,7 +36,8 @@
     │   ├── gorden-ppt-skill/
     │   ├── humanizer-zh/
     │   ├── taste-skill/
-    │   └── ten-step-learning/
+    │   ├── ten-step-learning/
+    │   └── vibe-resume-skill/
     ├── productivity-developer/ # 效能与开发工具分类目录
     │   ├── agency-agents/
     │   ├── andrej-karpathy-skills/
@@ -99,6 +100,7 @@
 | **claude-for-legal-ZH** | 面向中国法律体系的 AI Agent 与技能库，涵盖合同审查、数据合规、诉讼准备、主体信用穿透及元典 MCP 法规检索 | 进行商事合同审查、企业数据合规体检、民商事诉讼准备或法律检索问答时 | [👉 详细配置与使用指南](tools/office-creative/claude-for-legal-ZH/README.md) |
 | **dashi-ppt-skill** | 大师 PPT 生成技能，内置 12 套视觉主题与 1020 个专业版式，生成带在线编辑器的离线 HTML 网页并可一键导出为原生可编辑 `.pptx` 与 PDF | Agent 快速生成结构化演示文稿，在网页控制台就地微调布局、文本与图片，或需要导出为 `.pptx` 交付时 | [👉 详细配置与使用指南](tools/office-creative/dashi-ppt-skill/README.md) |
 | **figedit** | AI 图像解构与矢量重建技能，将截图、架构图、海报及 AI 生成图片重构为可编辑的分层 SVG 矢量图与原生 `.pptx` | 需要修改压平图片的文字/形状/公式、快速复刻论文配图或修改 AI 生成图片的布局时 | [👉 详细配置与使用指南](tools/office-creative/figedit/README.md) |
+| **vibe-resume-skill** | AI 简历生成与 12 套 A4 模板美化排版 Skill，支持经历事实提取、单页垂直平衡与针对不同 JD 导出版本 | 需要从零构建简历、更新已有简历且不破坏一页排版，或针对特定岗位 (JD) 调整简历侧重点时 | [👉 详细配置与使用指南](tools/office-creative/vibe-resume-skill/README.md) |
 | **aham-voice** | 本地优先的离线录音转写与会议纪要工具（macOS），集成 FunASR 离线转写、CAM++ 说话人分离与情绪感知 | 对保密会议录音进行离线音频转写、说话人声纹识别并调用 LLM 生成结构化会议纪要时 | [👉 详细配置与使用指南](tools/office-creative/aham-voice/README.md) |
 | **gorden-ppt-skill** | 基于 21 套内置或自定义的高质量中文模板生成与编辑 PPTX 演示文稿，支持自动出框检测与同级标题字号一致校验 | 需要制作年终/季度总结、商务提案、项目汇报、述职竞聘等高质量 PPTX 演示文稿且不破坏排版设计时 | [👉 详细配置与使用指南](tools/office-creative/gorden-ppt-skill/README.md) |
 | **ai-write-flow** | 技术博客与多端图卡写作流程控制技能包，支持选题对齐、时效核查、结构硬性门禁以及多轮降 AI 腔调的审查机制 | Agent 需要协助撰写技术博客、公众号长文、图卡内容，或对已有文本进行事实核验和中文化润色（降 AI 腔）时 | [👉 详细配置与使用指南](tools/office-creative/ai-write-flow/README.md) |

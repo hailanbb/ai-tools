@@ -119,6 +119,10 @@
                           "https://github.com/Jesseovo/last30days-skill-cn":  {
                                                                                  "tool_name":  "last30days-skill-cn",
                                                                                  "imported_at":  "2026-07-26T21:19:47+08:00"
-                                                                             }
+                                                                             },
+                          "https://github.com/KevinYoung-Kw/vibe-resume-skill":  {
+                                                                                    "tool_name":  "vibe-resume-skill",
+                                                                                    "imported_at":  "2026-07-26T21:33:32+08:00"
+                                                                                }
                       }
 }
