@@ -1,5 +1,10 @@
 # AI Write Flow (技术博客与图卡写作 Agent 技能包)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/zhaodl1983/ai-write-flow](https://github.com/zhaodl1983/ai-write-flow)
+
+
 AI Write Flow 是一个面向 AI 智能体（如 Hermes, Claude Code, Codex）定制的技术博客与多端图卡写作流程控制技能包。它集成了选题大纲、时效核查、结构硬性门禁以及多轮降 AI 腔调的审查机制，帮助 Agent 产出具备真实人类质感、符合规范的文章。
 
 ---

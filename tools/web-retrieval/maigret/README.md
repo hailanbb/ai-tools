@@ -1,5 +1,10 @@
 # Maigret - 用户名公开信息检索与画像工具
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/soxoj/maigret](https://github.com/soxoj/maigret)
+
+
 Maigret 是一款高效的公开信息搜寻 (OSINT) 与检索工具，仅凭一个用户名即可在 3000+ 公开站点和社交平台上进行跨域账号查找，并提取可获取的公开信息，生成结构化档案与关联地图。无需任何 API 密钥。
 
 ---

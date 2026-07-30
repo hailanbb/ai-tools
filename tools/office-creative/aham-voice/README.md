@@ -1,5 +1,10 @@
 # Aham Voice - 本地离线录音转写与 AI 会议纪要工具 (macOS)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/Aham-AIAPP/aham-voice](https://github.com/Aham-AIAPP/aham-voice)
+
+
 Aham Voice 是一款专为 macOS 设计的本地优先、隐私安全的录音转写与 AI 会议纪要生成应用。通过在本地离线集成 FunASR 转写、CAM++ 说话人分离及 emotion2vec 声学情绪感知，实现数据与音频全程保留在本地，仅将生成的稿件通过用户自配的 OpenAI 兼容 LLM 接口整理为结构化会议纪要。
 
 ---

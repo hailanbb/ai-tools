@@ -4,6 +4,11 @@
 
 # Video Batch Download (多平台视频批量下载与本地转写工具)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/ljb1020/video-batch-download](https://github.com/ljb1020/video-batch-download)
+
+
 Video Batch Download 是一个面向公开视频内容的本地化媒体提取和文案转录工具，支持一键下载抖音、B站和小红书的公开视频，并支持在本地离线将音频识别转换为结构化文本，无任何云端 API 依赖。
 
 ---

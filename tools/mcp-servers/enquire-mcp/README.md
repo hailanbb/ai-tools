@@ -1,5 +1,10 @@
 # Enquire MCP (Obsidian 智能体长期记忆与检索服务端)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/oomkapwn/enquire-mcp](https://github.com/oomkapwn/enquire-mcp)
+
+
 Enquire MCP 是一个面向 AI 智能体（如 Claude Code, Cursor, Claude Desktop 等）打造的 Obsidian 长期记忆与混合检索服务端。
 
 它将您的本地 Obsidian 仓库（Vault）作为 AI 的外部记忆，通过本地运行的向量模型和时效感知技术，使 AI 能够在多次会话、多个模型中无缝读取、检索和追加您的私人知识，实现完全本地化、隐私受保护的混合搜索。

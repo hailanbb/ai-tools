@@ -1,5 +1,10 @@
 # last30days-cn - 中国平台 30 天深度研究与舆情检索引擎 (last30days-skill-cn)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/Jesseovo/last30days-skill-cn](https://github.com/Jesseovo/last30days-skill-cn)
+
+
 last30days-cn 是一款专为中国互联网环境深度本土化改造的 AI Agent 检索与研究技能套件（基于 mvanhorn/last30days-skill）。它能自动化搜索中国 8 大主流平台（小红书、知乎、抖音、微信公众号、B站、百度、微博、头条）最近 30 天的热点与内容，综合提取后一键生成交互式、符合 Swiss/IKB 视觉审美的离线 HTML 深度研报。
 
 ---

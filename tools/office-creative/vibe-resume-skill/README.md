@@ -1,5 +1,10 @@
 # Vibe Resume Skill - AI 简历生成与 12 套模板排版技能 (vibe-resume-skill)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/KevinYoung-Kw/vibe-resume-skill](https://github.com/KevinYoung-Kw/vibe-resume-skill)
+
+
 Vibe Resume Skill 是一套专门面向 AI Coding Agent（支持 Codex, Kimi, WorkBuddy, 扣子, Claude 等）的智能简历生成、排版美化与多岗位 (JD) 匹配 Skill 套件。它内置 12 套符合 A4 印刷标准及 ATS 友好的专业 HTML/PDF 模板（涵盖经典单栏、双栏 Grid、深色侧栏、年报档案风、极客代码风及包豪斯几何风），能自动控制内容密度、单页一页排版对齐与多版本简历管理。
 
 ---

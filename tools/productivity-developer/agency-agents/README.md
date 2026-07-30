@@ -1,5 +1,10 @@
 # The Agency - 全领域 AI 专家 Agent 团队套件 (agency-agents)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
+
+
 The Agency 是一套经过精心打磨的开源 AI 专家 Agent 角色库与自动化转换套件，涵盖工程、设计、安全、营销、金融、产品、学术等 20+ 个专业领域。每个 Agent 均具备专有的领域深度、个性声音、交付门禁与实战代码流。
 
 ---

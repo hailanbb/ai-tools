@@ -1,5 +1,10 @@
 # 游资（UZI）Skills - 66 评审团多维股票深度分析与量化研报引擎 (uzi-skill)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/wbh604/UZI-Skill](https://github.com/wbh604/UZI-Skill)
+
+
 游资（UZI）Skills 是一款面向 A 股 / 港股 / 美股的个股深度量化分析与研报生成 Agent 引擎。它集成了 66 位跨领域评审团（覆盖价值派巴菲特、游资派赵老哥、科技派黄仁勋与马斯克等 9 大流派）、22 维实时与财务数据提取，以及 22 种机构级分析模型（含 DCF 估值、杀猪盘排查、多股对决与财务审查门禁），全免费数据源，一键输出 Bloomberg 风格离线 HTML 报告与多终端战报。
 
 ---

@@ -1,5 +1,10 @@
 # Claude for Legal — 中国法版本 (claude-for-legal-ZH)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/CSlawyer1985/claude-for-legal-ZH](https://github.com/CSlawyer1985/claude-for-legal-ZH)
+
+
 `claude-for-legal-ZH` 是 Anthropic 官方 `claude-for-legal` 的系统性中国法适配版本，旨在为律师及法务团队提供针对中国法律体系（民法典合同编、个人信息保护法、民事诉讼法、公司法等）的参考 Agent、技能与 MCP 数据连接器。
 
 ---

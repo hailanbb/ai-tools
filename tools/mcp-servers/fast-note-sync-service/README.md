@@ -1,5 +1,10 @@
 # Fast Note Sync Service (FNS 笔记同步与 MCP 服务平台)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/haierkeys/fast-note-sync-service](https://github.com/haierkeys/fast-note-sync-service)
+
+
 Fast Note Sync Service (简称 FNS) 是一个使用 Go 语言开发的高性能、低延迟的 Obsidian 笔记多端实时同步与在线管理服务平台，同时内置了**原生 MCP (Model Context Protocol) 网关**和标准 REST API。
 
 它能够将您的个人 Obsidian 知识库以极高效率同步至云端，并作为一个安全的本地/远端 MCP 服务，让 AI 客户端（如 Cursor、Cherry Studio）具备安全读写您私人笔记和附件的能力。

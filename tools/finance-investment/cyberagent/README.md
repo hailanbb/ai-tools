@@ -1,5 +1,10 @@
 # 🧠 cyberagent —— 物理瓶颈 · 反共识投资分析框架
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/CyberK13/cyberagent](https://github.com/CyberK13/cyberagent)
+
+
 一条 LLM 智能体链，把任意标的一层层拆到卡住它所在产业的**物理约束**，核对市场**是否已经定价**，并**拒绝追逐叙事驱动的尖顶**。覆盖 A 股 / 港股 / 美股。
 
 ---

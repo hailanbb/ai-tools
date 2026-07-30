@@ -1,5 +1,10 @@
 # z-skills 本地工作流自动化技能套件
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/tjxj/z-skills](https://github.com/tjxj/z-skills)
+
+
 `z-skills` 是一组面向中文创作、知识管理和自动化任务的本地 Agent Skills 集合，将常见的网页采集、视频下载、多模态学习、文档转换、邮件处理及证据型问答沉淀为可复用的稳定能力。
 
 ---

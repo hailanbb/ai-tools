@@ -1,5 +1,10 @@
 # 大师 PPT (Dashi PPT Skill) - 网页 PPT / 可编辑 PPTX 技能
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)
+
+
 大师 PPT (Dashi PPT Skill) 是一款专为 AI Agent（如 Claude Code, Codex, 豆包, Marvis, Workbuddy 等）打造的高品质演示文稿生成 Skill。它能将结构化文档或大纲自动转化为带本地控制台的离线 HTML 网页 PPT，并支持一键导出为原生、文字保持可编辑的 `.pptx` 文件或 PDF。
 
 ---

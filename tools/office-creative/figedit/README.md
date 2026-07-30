@@ -1,5 +1,10 @@
 # FigEdit · 图易编 (AI 图像解构与矢量重建技能)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/giszzt/figedit](https://github.com/giszzt/figedit)
+
+
 FigEdit（中文名「图易编」）是一个旨在“让压平的图重新可编辑”的 AI Agent Skill。它能够将截图、论文配图、架构图、海报及 AI 生成图片自动拆解并重建为可编辑的分层 SVG 矢量图与原生 PowerPoint (`.pptx`) 演示文稿。
 
 ---
