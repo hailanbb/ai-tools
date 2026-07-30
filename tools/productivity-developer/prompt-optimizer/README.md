@@ -1,5 +1,10 @@
 # Prompt Optimizer (提示词优化器) 🚀
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/linshenkx/prompt-optimizer](https://github.com/linshenkx/prompt-optimizer)
+
+
 Prompt Optimizer 是一个强大的 AI 提示词优化与测试工具，支持一键优化系统/用户提示词、多模型集成评估对比、图像生成（文生图/图生图/多图生图）以及 MCP (Model Context Protocol) 协议支持。
 
 ---

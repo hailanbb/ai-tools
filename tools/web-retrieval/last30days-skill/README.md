@@ -1,5 +1,10 @@
 # last30days-skill - AI 驱动的 30 天社交与舆情搜索引擎
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill)
+
+
 本工具是一个由 AI 智能代理主导的舆情与社交搜索引擎。它不依赖网站编辑的推荐，而是通过真实用户的点赞数、喜欢数、互动量以及 Polymarket 预测市场的真实资金投入对信息进行评分和聚合。
 
 它能够并行检索 Reddit、X (Twitter)、YouTube、TikTok、Hacker News、Polymarket、GitHub 以及主流网页，并自动进行跨平台内容聚类与去重，最终由 AI 提炼成一份客观的舆情简报。

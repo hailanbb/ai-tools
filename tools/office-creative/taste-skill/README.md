@@ -1,5 +1,10 @@
 # taste-skill - AI 智能体的前端审美与反模板化设计技能框架
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill)
+
+
 本工具（Taste Skill）是一个专为 AI 编码智能体设计的前端美学与设计原则框架。它能够纠正 AI 自动生成的千篇一律、具有廉价感的界面（即 AI 味/模板化前端），通过精细的排版、创新的布局、流畅的微动效以及合理的间距，赋予 AI 产出高水准、具有现代美感和高级视觉表现力界面的能力。
 
 本框架支持与 React、Vue、Svelte 等主流前端框架无缝配合。

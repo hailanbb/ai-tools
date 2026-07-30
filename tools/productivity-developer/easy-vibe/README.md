@@ -1,5 +1,10 @@
 # Easy-Vibe · AI 驱动编程与 Agent 开发零基础交互教程 (easy-vibe)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe)
+
+
 Easy-Vibe 是由 Datawhale 开源的自然语言/AI 驱动编程（Vibe Coding）零基础交互式教程与 Agent 实战项目套件。项目旨在让零基础用户及开发者能够通过自然语言与 AI 协同构建全栈应用，涵盖 10 种语言文档、自适应学习地图、IDE Agent 协作模拟器、RAG 可视化原理及 OpenClaw 实战指南。
 
 ---

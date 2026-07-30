@@ -1,5 +1,10 @@
 # Agent Skills - Addy Osmani 生产级 AI Agent 软件工程 24 技能合集 (agent-skills)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
+
+
 Agent Skills 是由 Google 资深 Web 架构师 Addy Osmani 开发的生产级 AI Agent 软件工程技能与生命周期控制套件。它将资深软件工程师在开发、测试、审校和发布全流程中的质量门禁与最佳实践编码为 Agent 技能，支持 Claude Code, Cursor, Codex, Gemini, Antigravity, Copilot 等 70+ 主流 AI 编程智能体。
 
 ---

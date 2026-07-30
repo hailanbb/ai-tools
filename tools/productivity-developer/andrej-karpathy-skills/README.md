@@ -1,5 +1,10 @@
 # 受 Karpathy 启发的 AI 智能体编码提效指南 (Karpathy Skills)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
+
+
 本工具由一系列专为 AI 编码智能体（如 Claude Code、Cursor 等）定制的原则与规约文件组成，旨在彻底改善 LLM 的开发行为，对抗错误假设、过度复杂化、无关代码编辑以及缺少测试验证等典型 AI 编码陷阱。
 
 ---

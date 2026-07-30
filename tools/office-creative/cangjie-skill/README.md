@@ -1,5 +1,10 @@
 # Cangjie Skill (仓颉方法论蒸馏技能)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/kangarooking/cangjie-skill](https://github.com/kangarooking/cangjie-skill)
+
+
 Cangjie Skill 是一个用于将书籍、长视频转录、播客及访谈等长文本沉淀，抽取、验证并蒸馏为 AI Agent 可调用的模块化技能（`SKILL.md`）的框架与工具包。
 
 它解决了“收藏了大量高价值内容但无法被 Agent 调用或在实际决策中复用”的真实痛点，通过规范化的 **RIA-TV++** 管道，将压缩总结性笔记升华成场景触发、高度结构化的执行工具。

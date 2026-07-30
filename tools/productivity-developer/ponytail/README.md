@@ -1,5 +1,10 @@
 # Ponytail - AI Agent 极简编码与行为治理工具 (The Lazy Senior Dev)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
+
+
 `ponytail` 是一个面向 AI 智能体的代码工程治理工具与 MCP 服务（形象为“留着长马尾、戴椭圆眼镜的资深懒老佬程序员”），通过注入极简编码思维梯子（The Ladder），防止大模型过度设计、盲目引入第三方依赖和写无用模板代码，实测在实际工程中平均降低 ~54% 代码量 (LOC)、减少 ~20% 成本和 ~27% 耗时，同时 100% 保持代码安全性。
 
 ---

@@ -4,6 +4,11 @@
 
 # MCP Toolbox for Databases (数据库 MCP 工具箱)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox)
+
+
 <p align="center">
   <img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/googleapis/mcp-toolbox">
   <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">

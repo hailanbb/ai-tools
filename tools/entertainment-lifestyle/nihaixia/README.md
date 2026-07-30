@@ -1,5 +1,10 @@
 # 倪海厦skill · 经方中医 AI Agent 技能 (nihaixia)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/jangviktor-web/nihaixia](https://github.com/jangviktor-web/nihaixia)
+
+
 将经方大师倪海厦（1954-2012）的中医思维体系（《伤寒论》《金匮要略》《神农本草经》《黄帝内经》《天纪》及 849 例临床医案，共 3.5M 字蒸馏心法）注入 AI Agent 的专属 Skill 套件。激活后，AI Agent 能以倪海厦的视角进行六经辨证、经方选药、医案参照及健康调理。
 
 ---

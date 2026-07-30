@@ -1,5 +1,10 @@
 # Gorden PPT Skill 使用与配置指南
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/GordenSun/GordenPPTSkill](https://github.com/GordenSun/GordenPPTSkill)
+
+
 Gorden PPT Skill 是一个高效的 PowerPoint 演示文稿生成与编辑工具，内置 21 套高质量的中文 PPT 模板，配合 Python 脚本支持在不破坏原排版、配色和字号的前提下智能填充文字、自动完成出框检测与同级标题字号一致校验，非常适合国企、大厂等商务演示与汇报场景。
 
 ---

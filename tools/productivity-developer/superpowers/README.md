@@ -1,5 +1,10 @@
 # Superpowers - Agent 软件开发方法论与技能套件
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/obra/superpowers](https://github.com/obra/superpowers)
+
+
 Superpowers 是一套构建在可组合 Agent 技能与引导指令之上的完整软件开发方法论工具包。它能够在 coding agent 启动的第一时间介入，防止 Agent 盲目直接写代码，而是引导其进行需求提炼、短块确认、TDD 红绿循环测试驱动与 Subagent 分工自主迭代。
 
 ---

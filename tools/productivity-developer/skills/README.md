@@ -8,6 +8,11 @@
 
 # Matt Pocock's Skills (智能体工程技能集)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/mattpocock/skills](https://github.com/mattpocock/skills)
+
+
 本工具箱是由 TypeScript 专家 Matt Pocock 开发并开源的 AI 智能体技能集，旨在用于日常真实项目的工程实践，摆脱缺乏逻辑反馈的盲目“感觉编码”（Vibe Coding）。
 
 这些技能被设计为微型、易修改且支持高度可组合性，旨在通过引入明确的拷问与测试机制，解决 AI 代理编写代码时的意图偏离、过于冗长以及产生复杂 bug 屎山（Ball of Mud）等核心痛点。

@@ -1,5 +1,10 @@
 # ✍️ PPT Master (AI 原生 PowerPoint 深度生成工具)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/hugohe3/ppt-master](https://github.com/hugohe3/ppt-master)
+
+
 PPT Master 是一套运行于 AI Agent 中的原生 PowerPoint 演示文稿生成工作流。支持将 PDF、DOCX、Markdown、网页 URL 或纯文本等任意材料，直接在本地转换为包含原生母版、形状、过渡动效、数据图表及语音旁白的高质量原生可编辑 `.pptx` 演示文稿。
 
 ---

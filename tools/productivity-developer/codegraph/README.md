@@ -1,5 +1,10 @@
 # CodeGraph - 基于 Rust 内核的本地代码语义图谱与 Agent 上下文引擎 (codegraph)
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
+
+
 CodeGraph 是一个 100% 本地运行的高性能代码语义依赖图谱分析平台。它基于 Rust 高效内核，专门为 AI Coding Agent（支持 Antigravity, Claude Code, Cursor, Codex, OpenCode, Gemini, Hermes Agent 等）提供精准的代码上下文识别、全量函数/类调用链追踪、框架路由分析与 MCP 接口服务。
 
 ---

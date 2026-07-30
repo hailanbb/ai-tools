@@ -10,6 +10,11 @@
 
 # Bili Note
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/Rimagination/bili-note](https://github.com/Rimagination/bili-note)
+
+
 Bili Note 是一个面向知识库的 B 站视频与图文笔记工具：完整归档字幕、图文正文、图片与评论，按内容信息量和质量动态控制笔记长度，把 B 站内容整理成可学习、可检索、可追问的 Markdown 笔记。
 
 ---

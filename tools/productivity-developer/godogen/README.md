@@ -1,5 +1,10 @@
 # godogen - 基于 Godot、Bevy 与 Babylon.js 的自主游戏开发生成器
 
+
+> 🔗 **原项目 GitHub 地址**: 
+[https://github.com/htdt/godogen](https://github.com/htdt/godogen)
+
+
 本工具（Godogen）是一个由 AI 智能代理（如 Claude Code 或 Codex）主导的自主游戏开发生成器。用户只需描述想要的游戏类型，AI 智能代理便会自动编写游戏代码、生成所需的 3D 或 2D 素材、运行游戏引擎并基于实际的游戏运行画面（录屏或截图）进行迭代调试，直至交付一个完整可玩的游戏。
 
 本项目的核心逻辑是：**godogen 项目源码 -> 发布出专属游戏仓库 -> 由 AI 智能代理在专属仓库中构建出最终游戏**。
