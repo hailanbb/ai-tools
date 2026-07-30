@@ -42,6 +42,7 @@
     │   ├── agency-agents/
     │   ├── agent-skills/
     │   ├── andrej-karpathy-skills/
+    │   ├── awesome-llm-apps/
     │   ├── codegraph/
     │   ├── easy-vibe/
     │   ├── godogen/
@@ -118,6 +119,7 @@
 | 工具名称 | 核心功能 | 触发场景 | 详细说明 |
 | :--- | :--- | :--- | :--- |
 | **agency-agents** | 全领域 AI 专家 Agent 团队套件（The Agency），包含工程、设计、安全、营销、金融等 20+ 领域专家 Agent 角色及自动化格式转换安装脚本 | 需要组建多角色 AI Agent 专家团队协作、按岗位精准安装 Agent 插件或导出至不同客户端时 | [👉 详细配置与使用指南](tools/productivity-developer/agency-agents/README.md) |
+| **awesome-llm-apps** | 收录 100+ 端到端开源 AI Agent、Agent Skills 和 RAG 应用实战例程与案例库 | 需要快速构建、测试或参考各种场景下的生产级 AI Agent 与 RAG 应用时 | [👉 详细配置与使用指南](tools/productivity-developer/awesome-llm-apps/README.md) |
 | **agent-skills** | Google 资深架构师 Addy Osmani 出品的生产级 Agent 24 技能套件，涵盖软件全生命周期 8 大指令（/spec 到 /ship）与 TDD、性能审计、代码极简 | 规范 AI Agent 软件开发流程、强制进行 TDD 测试驱动、五轴代码审查或一键构建发布时 | [👉 详细配置与使用指南](tools/productivity-developer/agent-skills/README.md) |
 | **andrej-karpathy-skills** | 受 Karpathy 启发、面向 AI 智能体的行为控制原则与最佳实践，包含 Claude Code 插件与 Cursor 项目规则，纠正 LLM 开发中的错误假设、过度复杂、无关改动与缺少验证等陷阱 | 当需要限制 AI Agent 的编码边界、在复杂任务执行前对齐假设、让其保持极简编码并使用测试进行循环验证时 | [👉 详细配置与使用指南](tools/productivity-developer/andrej-karpathy-skills/README.md) |
 | **codegraph** | 基于 Rust 内核的本地代码语义图谱与 Agent 上下文引擎，提供精准的代码调用链推导、框架路由解析及 MCP 接口服务 | 当需要为 Agent 提供全库代码语义理解、追踪函数调用依赖、进行 PR 影响推导或集成 MCP 接口时 | [👉 详细配置与使用指南](tools/productivity-developer/codegraph/README.md) |
