@@ -135,6 +135,10 @@
         "https://github.com/Shubhamsaboo/awesome-llm-apps": {
             "tool_name": "awesome-llm-apps",
             "imported_at": "2026-07-30T18:21:30+08:00"
+        },
+        "https://github.com/headroomlabs-ai/headroom": {
+            "tool_name": "headroom",
+            "imported_at": "2026-07-30T18:55:00+08:00"
         }
     }
 }
