@@ -139,6 +139,10 @@
         "https://github.com/headroomlabs-ai/headroom": {
             "tool_name": "headroom",
             "imported_at": "2026-07-30T18:55:00+08:00"
+        },
+        "https://github.com/microsoft/markitdown": {
+            "tool_name": "markitdown",
+            "imported_at": "2026-07-30T19:15:35+08:00"
         }
     }
 }

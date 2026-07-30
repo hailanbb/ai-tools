@@ -35,6 +35,7 @@
     │   ├── figedit/
     │   ├── gorden-ppt-skill/
     │   ├── humanizer-zh/
+    │   ├── markitdown/
     │   ├── taste-skill/
     │   ├── ten-step-learning/
     │   └── vibe-resume-skill/
@@ -110,6 +111,7 @@
 | **ai-write-flow** | 技术博客与多端图卡写作流程控制技能包，支持选题对齐、时效核查、结构硬性门禁以及多轮降 AI 腔调的审查机制 | Agent 需要协助撰写技术博客、公众号长文、图卡内容，或对已有文本进行事实核验和中文化润色（降 AI 腔）时 | [👉 详细配置与使用指南](tools/office-creative/ai-write-flow/README.md) |
 | **taste-skill** | 提供反模板化的 AI 前端美学设计规范与 GSAP 交互骨架，支持风格拨盘调节，指导智能体产出高品质的 UI 页面 | 当需要编写、重构或优化网页 UI，且希望纠正 AI 生成的低级、重复及廉价模板风格的前端界面时 | [👉 详细配置与使用指南](tools/office-creative/taste-skill/README.md) |
 | **humanizer-zh** | 基于维基百科 24 种 AI 写作特征检测规则，识别并去除中文文本的 AI 生成痕迹，智能润色出自然、鲜活且符合中文习惯的人性化文本 | 当需要改写 AI 腔调的文案、净化 AI 味文本、翻译或审校需要人情味的技术与博客长文时 | [👉 详细配置与使用指南](tools/office-creative/humanizer-zh/README.md) |
+| **markitdown** | 微软开源的多格式文档与多媒体转换工具，将 PDF、Office（Word/PPT/Excel）、图片 OCR、音频转写、HTML 等提炼为 LLM 友好的 Markdown | 需要将各类复杂格式文档、扫描件、多媒体转为结构化 Markdown 供 LLM 检索与消费时 | [👉 详细配置与使用指南](tools/office-creative/markitdown/README.md) |
 | **cangjie-skill** | 基于 RIA-TV++ 管道的方法论蒸馏工具，支持从书籍、长视频转录、播客等文本中，抽取、验证并构建高执行力的 AI 技能卡（SKILL.md） | 当需要系统性分析一本书或一个知识视频/播客，并将其提炼为可在 Agent 中被场景触发的模块化执行工具时 | [👉 详细配置与使用指南](tools/office-creative/cangjie-skill/README.md) |
 | **ten-step-learning** | 基于 STORM 架构的十步自适应学习与知识图谱构建工具，提炼 20% 核心原理并生成一页 HTML 速查卡片 | 快速研究新主题、梳理知识框架、生成单文件网页速查表时 | [👉 详细配置与使用指南](tools/office-creative/ten-step-learning/README.md) |
 
