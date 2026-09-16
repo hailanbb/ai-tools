@@ -24,6 +24,7 @@
     │   ├── last30days-skill-cn/
     │   ├── maigret/
     │   ├── scrapling/
+    │   ├── shy-downloader/
     │   ├── video-batch-download/
     │   └── z-skills/
     ├── office-creative/        # 办公与设计工具分类目录
@@ -95,6 +96,7 @@
 | **maigret** | 基于公开用户名跨 3000+ 站点进行公开账号查找与关联信息提取，生成 HTML 交互地图与 PDF 档案报告 | 根据已知用户名发现其公开社交账号、生成公开档案及进行跨平台轨迹提炼时 | [👉 详细配置与使用指南](tools/web-retrieval/maigret/README.md) |
 | **bili-note** | 提炼 B 站视频、音频转写、图文动态与评论，按信息量动态控制笔记预算，归档为 Markdown 知识笔记 | 提取、总结、整理 B 站视频/图文/动态内容，保存至本地或 Obsidian 知识库 | [👉 详细配置与使用指南](tools/web-retrieval/bili-note/README.md) |
 | **video-batch-download** | 多平台（抖音、B站、小红书）公开视频批量下载与本地语音转写工具，支持分离流合并，本地 faster-whisper 转录和结构化输出 | 批量下载抖音/B站/小红书公开视频，或转录音频内容为文本进行后续分析时 | [👉 详细配置与使用指南](tools/web-retrieval/video-batch-download/README.md) |
+| **SHY-downloader** | 面向 15+ 平台（微信视频号/抖音/小红书/YouTube/B站/海外社交平台）的通用视频下载与 ASR 转写 CLI，支持微信视频号零配置解析、抖音去水印、断点续传与博主批量追踪 | 当需要跨多平台批量下载短视频/长视频、解析微信视频号、提取无水印视频流及进行本地或云端 ASR 语音文案转写时 | [👉 详细配置与使用指南](tools/web-retrieval/shy-downloader/README.md) |
 | **z-skills** | 面向中文创作与自动化任务的技能套件，涵盖网页与视频素材采集下载、多模态学习、文档/表格转换与编辑、邮件处理及证据型问答 | 批量采集网页素材、下载全平台视频、文档与表格格式互转、邮件处理及本地证据问答时 | [👉 详细配置与使用指南](tools/web-retrieval/z-skills/README.md) |
 
 ### ✍️ 办公与设计工具 (Office & Creative Tools)

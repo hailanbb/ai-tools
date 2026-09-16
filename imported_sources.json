@@ -151,6 +151,10 @@
         "https://github.com/coreyhaines31/marketingskills": {
             "tool_name": "marketingskills",
             "imported_at": "2026-09-09T13:19:30+08:00"
+        },
+        "https://github.com/andyshi70/SHY-downloader": {
+            "tool_name": "shy-downloader",
+            "imported_at": "2026-09-16T10:53:00+08:00"
         }
     }
 }
