@@ -155,6 +155,10 @@
         "https://github.com/andyshi70/SHY-downloader": {
             "tool_name": "shy-downloader",
             "imported_at": "2026-09-16T10:53:00+08:00"
+        },
+        "https://github.com/tcarac/skill-doctor": {
+            "tool_name": "skill-doctor",
+            "imported_at": "2026-09-17T00:16:00+08:00"
         }
     }
 }

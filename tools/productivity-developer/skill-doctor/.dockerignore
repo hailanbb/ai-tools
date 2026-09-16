@@ -1,0 +1,62 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# CI/CD
+.github
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+.pytest_cache
+.coverage
+htmlcov
+
+# Virtual environments
+venv
+env
+.venv
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Documentation
+# Keep README.md for package metadata
+docs
+CONTRIBUTING.md
+CHANGELOG.md
+SECURITY.md
+
+# Tests
+tests
+.pytest_cache
+
+# Development
+.editorconfig
+.pylintrc
+.flake8
+pytest.ini
+requirements-dev.txt
+.pre-commit-config.yaml
+.markdownlint.yaml
+.secrets.baseline
+
+# Examples
+examples
+
+# Explicitly include required files for Docker build
+!pyproject.toml
+!uv.lock
+!README.md
