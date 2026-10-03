@@ -159,6 +159,10 @@
         "https://github.com/tcarac/skill-doctor": {
             "tool_name": "skill-doctor",
             "imported_at": "2026-09-17T00:16:00+08:00"
+        },
+        "https://github.com/cursortouch/windows-mcp": {
+            "tool_name": "windows-mcp",
+            "imported_at": "2026-10-03T11:30:00+08:00"
         }
     }
 }
