@@ -163,6 +163,10 @@
         "https://github.com/cursortouch/windows-mcp": {
             "tool_name": "windows-mcp",
             "imported_at": "2026-10-03T11:30:00+08:00"
+        },
+        "https://github.com/Renhuai123/ziwei-doushu": {
+            "tool_name": "ziwei-doushu",
+            "imported_at": "2026-11-06T21:02:13.061500+08:00"
         }
     }
 }
