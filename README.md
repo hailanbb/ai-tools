@@ -48,6 +48,7 @@
     │   ├── andrej-karpathy-skills/
     │   ├── awesome-llm-apps/
     │   ├── codegraph/
+    │   ├── craft-anything/
     │   ├── easy-vibe/
     │   ├── godogen/
     │   ├── headroom/
@@ -146,6 +147,7 @@
 | **skill-creator-cn** | 针对中文语境优化的 AI Agent Skill 创作、重构、评估与描述调优工具 | 编写新的 Agent Skill、重构已有技能、进行评测调试与触发率优化时 | [👉 详细配置与使用指南](tools/productivity-developer/skill-creator-cn/README.md) |
 | **skill-doctor** | 专为 Agent Skills 设计的规范合规性体检与诊断工具（支持 GitHub Action 与本地 Python 运行），提供严格的 SKILL.md Frontmatter 格式校验、名称/长度约束体检、错误自动修复建议与 PR 审查注释 | 为 Skill 仓库配置 CI 自动化门禁、在发布/提交前对本地 Agent 技能包进行合规性诊断与自愈修复时 | [👉 详细配置与使用指南](tools/productivity-developer/skill-doctor/README.md) |
 | **marketingskills** | Corey Haines 开发的 40+ AI Agent 营销与增长专属技能套件，覆盖 CRO 转化率优化、文案撰写、AI 搜索优化 (GEO/AEO)、付费投放与留存工程 | 当需要为产品制定营销与增长策略、优化落地页转化率、编写冷邮件与营销文案、搭建 A/B 测试或优化 AI 搜索引擎可见度时 | [👉 详细配置与使用指南](tools/productivity-developer/marketingskills/README.md) |
+| **craft-anything** | 纯 Rust 编写的开源净室研究与软件重建引擎，内置 314 个 CLI/MCP 工具，支持检查任意网站/桌面应用/游戏并驱动编码 Agent 进行重建与多轮比对收敛 | 需要对现有网站、桌面程序或游戏进行深度/净室逆向研究，或让编码 Agent 自动复刻重建并校验一致性时 | [👉 详细配置与使用指南](tools/productivity-developer/craft-anything/README.md) |
 
 ### 📈 金融理财 (Finance & Investment)
 
